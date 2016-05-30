@@ -1,0 +1,30 @@
+img {
+    display:none;
+    height:400px;
+    width:400px;
+    border:0px;
+    margin:0px;
+    padding:0px;
+}
+.img {
+    height:410px;
+    width:410px;
+}
+
+/*
+p {
+    color:green
+}
+*/
+
+#idl1, #idl2, #idl3, #idl_price {
+    display: none;
+}
+
+#idl2, #idl_price {
+    text-align: center;
+}
+
+#idl1 {
+    text-align: right;
+}
