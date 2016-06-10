@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
-<script type="text/javascript" src="js/const.js"></script>
-<script type="text/javascript" src="js/jq-image.js"></script>
-<script type="text/javascript" src="js/jq-all.js"></script>
 <link rel="stylesheet" href="css/css_main.css" />
+<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
+<script type="text/javascript" src="js/js-image2.js"></script>
 </head>
-<body onload="img_deamon()">
+<body>
     <center>
         <div>
             <table>
@@ -29,25 +27,25 @@
                 </tr>
                 <tr>
                     <td class="img">
-                        <img id='il1' onmouseover="img_select('il1')" class="img" src="/img/4.jpg" alt="оп" >
+                        <img id='il1' name='il1' class="img" src="/img/4.jpg" alt="оп" >
                         <div id='idl1'>
                             <p>концепт/идея<br />ведомость материалов<br />планы<br />развертки<br />схемырасположения</p>
                         </div>
                     </td>
                     <td class="img">
-                        <img id='il2' onmouseover="img_select('il2')" class="img" src="/img/10.jpg" alt="оп">
+                        <img id='il2' name='il2' class="img" src="/img/10.jpg" alt="оп">
                         <div id='idl2'>
-                            <p>-аэропорт уфа</p>
-                            <p>международный терминал</p>
-                            <p>-красная площадь</p>
-                            <p>-дворец съездов</p>
+                            <p id='proj1'>-аэропорт уфа</p>
+                            <p id='proj2'>международный терминал</p>
+                            <p id='proj3'>-красная площадь</p>
+                            <p id='proj4'>-дворец съездов</p>
                         </div>
                         <div id='idl_price'>
                             <p>деньги<br />деньги<br />деньги<br />деньги<br />деньги<br />деньги</p>
                         </div>
                     </td>
                     <td class="img">
-                        <img id='il3' onmouseover="img_select('il3')" class="img" src="/img/1.jpg" alt="оп">
+                        <img id='il3' name='il3' class="img" src="/img/1.jpg" alt="оп">
                         <div id='idl3'>
                             <p>концепт/идея<br />ведомость материалов<br />планы<br />развертки<br />схемырасположения</p>
                         </div>
@@ -69,7 +67,7 @@
                 </tr>
                 <tr>
                     <td colspan="3">
-                        <p id="debug">отладка</p>
+                        <p id="debug" name='debug'>отладка</p>
                     </td>
                 </tr>
             </table>
