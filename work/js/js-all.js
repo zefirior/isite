@@ -1,4 +1,4 @@
-/*var fotos1 = new Array("/img/1.jpg", "/img/2.jpg", "/img/3.jpg", "/img/4.jpg", "/img/5.jpg", "/img/6.jpg", "/img/7.jpg", "/img/8.jpg", "/img/9.jpg", "/img/10.jpg");
+var fotos1 = new Array("/img/1.jpg", "/img/2.jpg", "/img/3.jpg", "/img/4.jpg", "/img/5.jpg", "/img/6.jpg", "/img/7.jpg", "/img/8.jpg", "/img/9.jpg", "/img/10.jpg");
 var fotos2 = new Array("img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg", "img/5.jpg", "img/6.jpg", "img/7.jpg", "img/8.jpg", "img/9.jpg", "img/10.jpg");
 var fotos3 = new Array("img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg", "img/5.jpg", "img/6.jpg", "img/7.jpg", "img/8.jpg", "img/9.jpg", "img/10.jpg");
 var id_timeout;
@@ -19,11 +19,15 @@ function select(id, list){
     $(list).css("display", "block")
 }
 
+function activate(){
+    window.activ = 1;
+}
+
 function unselect(id, list){
 //    id_timeout_deamon = setTimeout('img_deamon()', 3000);
-    window.activ = 1;
+    setTimeout("activate()", 200);
     $(id).css("background", "white");
     $(id).css("color", "black");
     $(list).fadeOut(200);  //css("display", "none");
 }
-*/
+
