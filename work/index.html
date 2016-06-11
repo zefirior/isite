@@ -8,7 +8,7 @@
 </head>
 <body>
     <center>
-        <div>
+        <div class="body">
             <table>
                 <tr>
                     <td rowspan="6" width="auto"></td>
@@ -23,30 +23,38 @@
                 </tr>
                 <tr>
                     <td><p id='fl1' align="right" onmouseover="select('#fl1', '#idl1')" onmouseout="unselect('#fl1', '#idl1')">интерьер</p></td>
-                    <td><p id='fl2' align="center" onmouseover="select('#fl2', '#idl2')" onmouseout="unselect('#fl2', '#idl2')">портфолио</p></td>
+                    <td rowspan="2" class="td_center">
+                        <div class="td_center">
+                            <p id='fl2' align="center" onmouseover="select('#fl2', '#idl2')">портфолио</p>
+                            <div id='idl2'>
+                                <p id='proj1'>-аэропорт уфа</p>
+                                <p id='proj2'>международный терминал</p>
+                                <p id='proj3'>-красная площадь</p>
+                                <p id='proj4'>-дворец съездов</p>
+                            </div>
+                            <div class="img" id='il2'>
+                                <img  name='il2' class="img" src="/img/10.jpg" alt="оп">
+                            </div>
+                            <div id='idl_price'>
+                                <p>деньги<br />деньги<br />деньги<br />деньги<br />деньги<br />деньги</p>
+                            </div>
+                        </div>
+                    </td>                       
                     <td><p id='fl3' align="left" onmouseover="select('#fl3', '#idl3')" onmouseout="unselect('#fl3', '#idl3')">интерьер</p></td>
                 </tr>
                 <tr>
                     <td class="img">
-                        <img id='il1' name='il1' class="img" src="/img/4.jpg" alt="оп" >
+                        <div class="img" id='il1'>
+                            <img  name='il1' class="img" src="/img/4.jpg" alt="оп">
+                        </div>
                         <div id='idl1'>
                             <p>концепт/идея<br />ведомость материалов<br />планы<br />развертки<br />схемырасположения</p>
                         </div>
                     </td>
                     <td class="img">
-                        <img id='il2' name='il2' class="img" src="/img/10.jpg" alt="оп">
-                        <div id='idl2'>
-                            <p id='proj1'>-аэропорт уфа</p>
-                            <p id='proj2'>международный терминал</p>
-                            <p id='proj3'>-красная площадь</p>
-                            <p id='proj4'>-дворец съездов</p>
+                        <div class="img" id='il3'>
+                            <img  name='il3' class="img" src="/img/1.jpg" alt="оп">
                         </div>
-                        <div id='idl_price'>
-                            <p>деньги<br />деньги<br />деньги<br />деньги<br />деньги<br />деньги</p>
-                        </div>
-                    </td>
-                    <td class="img">
-                        <img id='il3' name='il3' class="img" src="/img/1.jpg" alt="оп">
                         <div id='idl3'>
                             <p>концепт/идея<br />ведомость материалов<br />планы<br />развертки<br />схемырасположения</p>
                         </div>
@@ -54,7 +62,9 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><p id='sl2' align="center" onmouseover="select('#sl2', '#idl_price')" onmouseout="unselect('#sl2', '#idl_price')">стоимость</p></td>
+                    <td colspan="3">
+                        <p id='sl2' align="center" onmouseover="select('#sl2', '#idl_price')" onmouseout="unselect('#sl2', '#idl_price')">стоимость</p>
+                    </td>
                     <td></td>
                 </tr>
                 <tr>

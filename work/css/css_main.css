@@ -1,21 +1,29 @@
-img {
-    display:none;
-    height:400px;
-    width:400px;
-    border:0px;
-    margin:0px;
-    padding:0px;
-}
-.img {
-    height:410px;
-    width:410px;
+.body table {
+    border-collapse:collapse;
 }
 
-/*
-p {
-    color:green
+.body * {
+    border:0px black solid;
 }
-*/
+
+.top {
+    margin-top:0px;
+    margin-bottom:auto;
+}
+
+.td_center {
+    width:400px;
+    height:435px;
+}
+
+div.img {
+    display:none;
+}
+
+.img, #idl2 {
+    height:400px;
+    width:400px;
+}
 
 #idl1, #idl2, #idl3, #idl_price {
     display: none;
