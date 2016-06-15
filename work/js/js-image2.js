@@ -16,15 +16,11 @@ function app(){
     $('#debug').append('<b>7</b>');
 }
 
-$(document).ready(function (){
-    img_show();
-    $('#debug').append('<b>9</b>');
-    setInterval("img_show()", 6000);
-});
+
 
 
 function img_show(){
-    if(window.activ == 1) {
+    if(window.activ) {
         
         $('#debug').append('<b>1</b>');        
         setTimeout("img_clear_slow()", 3000);
@@ -36,21 +32,14 @@ function img_show(){
         if (position == 2) {list = fotos2;};
         if (position == 3) {list = fotos3;};
         foto = Math.round(list.length*Math.random() - 0.5);
-        $(id_img).attr({src: list[foto]});
+        var img_tag = id_img + ' img';
+        $(img_tag).attr({src: list[foto]});
         $(id_img).fadeIn(1000);
         $('#debug').append('<b>4</b>');
     }
     $('#debug').append('<b>5</b>');
 }
 
-//function img_close(){
-//    id_timeout_deamon = setTimeout(img_deamon(), 4000);
-//    img_clear_slow();
-//}
- 
-//function restart_d(){
-//    id_timeout_close = setTimeout(img_deamon(), 4000);
-//}
     
 function img_select(obj){
 /*var id_img = obj.getAttribute();*/
@@ -58,3 +47,5 @@ function img_select(obj){
 }
 
 //$('#debug').append('<b>' + list[foto] + '</b>');
+
+

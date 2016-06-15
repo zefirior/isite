@@ -1,3 +1,7 @@
+.body {
+    position:relarive;
+}
+
 .body table {
     border-collapse:collapse;
 }
@@ -13,7 +17,7 @@
 
 .td_center {
     width:400px;
-    height:435px;
+    vertical-align:top;    
 }
 
 div.img {
@@ -36,3 +40,10 @@ div.img {
 #idl1 {
     text-align: right;
 }
+
+/*
+.proj {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+*/
