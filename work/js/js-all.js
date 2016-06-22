@@ -1,6 +1,3 @@
-var fotos1 = new Array("/img/1.jpg", "/img/2.jpg", "/img/3.jpg", "/img/4.jpg", "/img/5.jpg", "/img/6.jpg", "/img/7.jpg", "/img/8.jpg", "/img/9.jpg", "/img/10.jpg");
-var fotos2 = new Array("img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg", "img/5.jpg", "img/6.jpg", "img/7.jpg", "img/8.jpg", "img/9.jpg", "img/10.jpg");
-var fotos3 = new Array("img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg", "img/5.jpg", "img/6.jpg", "img/7.jpg", "img/8.jpg", "img/9.jpg", "img/10.jpg");
 var id_timeout;
 var activ = 1;
 var position;
@@ -9,22 +6,18 @@ var foto;
 var list;
 var timeout_id;
 var activ_proj_menu = 0;
-var projects = {
-    'proj1' : ["img/1.jpg", "img/2.jpg", "img/3.jpg"],
-    'proj2' : ["img/4.jpg", "img/5.jpg", "img/6.jpg"],
-    'proj3' : ["img/7.jpg", "img/8.jpg", "img/9.jpg"],
-    'proj4' : ["img/10.jpg", "img/1.jpg", "img/5.jpg"]
-};
 
 
 $(document).ready(function (){
+    init_view();
     img_show();
-    $('#debug').append('<b>9</b>');
-    setInterval("img_show()", 6000);
+    setInterval("img_show()", 6500);
     if((document.documentElement.clientHeight / 2 - 300) > 0){
         $('.body').css("top", (document.documentElement.clientHeight / 2 - 300));
     };
-    $('.body').css("top", (document.documentElement.clientHeight / 2));
+    if((document.documentElement.clientWidth / 2 - 500) > 0){
+        $('.body').css("left", (document.documentElement.clientWidth / 2 - 600));
+    };
 });
 
 function select(id, list){
@@ -66,12 +59,24 @@ function close_menu(){
         unselect('#fl2', '#idl2');
         activ_proj_menu = 0;
     }
+    }
+
+function img_select(tag){
+    path_wb = $(tag).attr('src');
+    path = path_wb.replace('wb', '');
+    $(tag).attr({src: path});
+/*var id_img = obj.getAttribute();*/
+}
+
+function img_unselect(tag){
+    path = $(tag).attr('src');
+    path_wb = path.replace('.jpg', 'wb.jpg');
+    $(tag).attr({src: path_wb});
+/*var id_img = obj.getAttribute();*/
 }
 
 
 function show_proj(proj_num){
-    $('#debug').append('<b>7</b>');
-    $('#debug').append('<b>' + projects[proj_num][0] + '</b>');
     $('#il1 img').attr({src: projects[proj_num][0]});
     $('#il3 img').attr({src: projects[proj_num][2]});
     $('#il1').css('display', 'block');
