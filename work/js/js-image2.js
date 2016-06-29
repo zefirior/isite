@@ -1,5 +1,5 @@
 function img_clear(){
-    clearTimeout(window.time_close_id);
+    clearTimeout(window.time);
     $('#il1').css('display', 'none');
     $('#il2').css('display', 'none');
     $('#il3').css('display', 'none');
@@ -17,10 +17,13 @@ function img_clear_slow(){
     $('#il3').fadeOut(1000);
 }
 
-function img_select(tag){
-    path_wb = $(tag).attr('src');
-    path = path_wb.replace('wb', '');
-    $(tag).attr({src: path});
+function img_select(){
+    for (i=1; i<4; i++){
+        tag = '#il'.concat(String(i), ' img');
+        path_wb = $(tag).attr('src');
+        path = path_wb.replace('wb', '');
+        $(tag).attr({src: path});
+    }
 /*var id_img = obj.getAttribute();*/
 }
 
@@ -44,12 +47,17 @@ function img_show(){
         
         window.time_close_id = setTimeout("img_clear_slow()", 5000);
         
-        position = Math.round(3*Math.random() + 0.5);
-        id_img = '#il' + String(position);
+        var tmp;
+        do {
+        tmp = Math.round(3*Math.random() + 0.5);
+        }
+        while (window.position == tmp);
+        window.position = tmp;
+        id_img = '#il' + String(window.position);
         
-        if (position == 1) {list = fotos1;};
-        if (position == 2) {list = fotos2;};
-        if (position == 3) {list = fotos3;};
+        if (window.position == 1) {list = fotos1;};
+        if (window.position == 2) {list = fotos2;};
+        if (window.position == 3) {list = fotos3;};
                 
         view = Math.round(list.length*Math.random() - 0.5);
         var img_tag = id_img + ' img';
@@ -86,15 +94,15 @@ function init_view() {
                 if (proj[i].type == 'design') {
                     window.fotos2.push(['img/blanc.png', 
                                         'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], '.jpg')]);
+                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg')]);
                     window.fotos3.push(['img/blanc.png', 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], '.jpg'), 
+                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'), 
                                         'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg')]);
                 } else {
                     window.fotos1.push(['img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'),
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], '.jpg'), 
+                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'), 
                                         'img/blanc.png']);
-                    window.fotos2.push(['img/'.concat(proj[i].dir, '/', proj[i].view[j][0], '.jpg'), 
+                    window.fotos2.push(['img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'), 
                                         'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'), 
                                         'img/blanc.png']);
                 };
