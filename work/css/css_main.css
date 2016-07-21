@@ -10,14 +10,13 @@
     border:0px black solid;
 }
 
-.top {
-    margin-top:0px;
-    margin-bottom:auto;
-}
-
 .td_center {
     width:430px;
-    vertical-align:top;    
+}
+
+.content {
+    vertical-align:top;
+    height:460px;    
 }
 
 div.img {
