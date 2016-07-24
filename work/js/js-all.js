@@ -12,10 +12,18 @@ function select(id, on){
     };    
 }
 
+function unselect(id, list){
+//    id_timeout_deamon = setTimeout('img_deamon()', 3000);
+    activate();
+    if (id == '#fl2'){activ_proj_menu = 0};
+    $(id).css("background", "white");
+    $(id).css("color", "black");
+    $(list).css('display', 'none');  //css("display", "none");
+}
+
 function activate_menu (){
     activ_proj_menu = 1;
-    $('#il1 img').unbind('mouseover');
-    $('#il3 img').unbind('mouseover');
+    $('.img').unbind('mouseover');
 }
 
 function deactivate_menu (){
@@ -25,6 +33,7 @@ function deactivate_menu (){
 }
 
 function menu_click(id, list){
+    $('.list').css('display', 'none');
     if (id != '#fl2'){close_menu();};
     if (id == '#fl2'){activate_menu ();};
     window.activ = 0;
@@ -34,15 +43,6 @@ function menu_click(id, list){
 
 function activate(){
     window.activ = 1;
-}
-
-function unselect(id, list){
-//    id_timeout_deamon = setTimeout('img_deamon()', 3000);
-    activate();
-    if (id == '#fl2'){activ_proj_menu = 0};
-    $(id).css("background", "white");
-    $(id).css("color", "black");
-    $(list).css('display', 'none');  //css("display", "none");
 }
 
 function proj_list_close(){
@@ -56,8 +56,7 @@ function stop_close(){
 function close_menu(){
     if (activ_proj_menu == 1){
         unselect('#fl2', '#idl2');
-        $('#il1 img').mouseover(function(){img_unclear();});
-        $('#il3 img').mouseover(function(){img_unclear();});
+        $('.img').mouseover(function(){img_unclear();});
         $('#right').css('display', 'none');
         $('#left').css('display', 'none');
         activ_proj_menu = 0;
@@ -105,4 +104,17 @@ function next(){
         $('#il1 img').attr({src: 'img/'.concat(obj.dir, '/', obj.view[0][0], 'wb.jpg')});
         $('#il3 img').attr({src: 'img/blanc.png'});
     };
+}
+
+function reset() {
+    clearTimeout(window.reset_id);
+    window.reset_id = setTimeout("func_reset()", 15000);
+}
+
+function func_reset() {
+    $('.list').css('display', 'none');
+    $('#right').css('display', 'none');
+    $('#left').css('display', 'none');
+    img_clear();
+    activate();
 }

@@ -23,7 +23,7 @@ div.img {
     display:none;
 }
 
-.img, #idl2 {
+.td_img, .img, #idl2 {
     height:350px;
     width:350px;
 }
@@ -33,9 +33,13 @@ div.img {
     width:50px;
 }
 
-#idl1, #idl2, #idl3, #idl_price, #idl_title, .switcher {
-    vertical-align: center;
+#idl1, #idl2, #idl3, #idl_price, #idl_title, .switcher  {
+    vertical-align: middle;
     display: none;
+}
+
+#idl3 p {
+    margin-top:120px;
 }
 
 #idl2, #idl_price, #idl_title {
