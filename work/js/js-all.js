@@ -18,10 +18,12 @@ $(document).ready(function (){
     $('#fl2').hover(function(){select('#fl2', 1)}, function(){proj_list_close()});
     $('#fl3').hover(function(){select('#fl3', 1)}, function(){unselect('#fl3', '#idl3')});
     $('#sl2').hover(function(){select('#sl2', 1)}, function(){unselect('#sl2', '#idl_price')});
+    $('#title').hover(function(){select('#title', 1)}, function(){unselect('#title', '#idl_title')});
     $('#fl1').click(function(){menu_click('#fl1', '#idl1');});
     $('#fl2').click(function(){menu_click('#fl2', '#idl2');});
     $('#fl3').click(function(){menu_click('#fl3', '#idl3');});
     $('#sl2').click(function(){menu_click('#sl2', '#idl_price');});
+    $('#title').click(function(){menu_click('#title', '#idl_title');});
     $('#il1 img').mouseover(function(){img_unclear();});
     $('#il2 img').mouseover(function(){img_unclear();});
     $('#il3 img').mouseover(function(){img_unclear();});
@@ -35,11 +37,11 @@ $(document).ready(function (){
     $('#proj4').hover(function(){select('#proj4', 1);}, function(){select('#proj4', 0);});
     img_show();
     setInterval("img_show()", 6300);
-    if((document.documentElement.clientHeight / 2 - 300) > 0){
+    if((document.documentElement.clientHeight / 2 - 275) > 0){
         $('.body').css("top", ((document.documentElement.clientHeight / 2 - 300)*0.6));
     };
-    if((document.documentElement.clientWidth / 2 - 615) > 0){
-        $('.body').css("left", (document.documentElement.clientWidth / 2 - 615));
+    if((document.documentElement.clientWidth / 2 - 590) > 0){
+        $('.body').css("left", (document.documentElement.clientWidth / 2 - 590));
     };
 });
 
@@ -99,7 +101,13 @@ function show_proj(proj_name){
     if (a.type == 'design') {
         $('#il1 img').attr({src: 'img/blanc.png'});
         $('#il3 img').attr({src: 'img/'.concat(a.dir, '/', a.view[0][a.view[0].length - 1], 'wb.jpg')});
+        if (a.view[0].length > 1) {
+            $('#right').css('display', 'block');
+        }
     } else {
+        if (a.view[0].length > 1) {
+            $('#left').css('display', 'block');
+        }
         $('#il1 img').attr({src: 'img/'.concat(a.dir, '/', a.view[0][0], 'wb.jpg')});
         $('#il3 img').attr({src: 'img/blanc.png'});
     };
