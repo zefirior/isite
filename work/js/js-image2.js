@@ -68,68 +68,6 @@ function img_show(){
     }
 }
 
-function init_view() {
-    $('#debug').append('0');
-    var proj = window.projects2;
-    var i = 0;
-    var j;
-    $('#debug').append('5');
-    while (i < proj.length) {
-        j = 0;
-        $('#debug').append('1');
-        while (j < proj[i].view.length) {
-            $('#debug').append('2');
-            if (proj[i].view[j].length == 1){
-                if (proj[i].type == 'design') {
-                    window.fotos3.push(['img/blanc.png', 
-                                        'img/blanc.png', 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg')]);
-                } else {
-                    window.fotos1.push(['img/'.concat(proj[i].dir,'/', proj[i].view[j][0], 'wb.jpg'), 
-                                        'img/blanc.png', 
-                                        'img/blanc.png']);
-                };
-            };
-            if (proj[i].view[j].length == 2){
-                if (proj[i].type == 'design') {
-                    window.fotos2.push(['img/blanc.png', 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg')]);
-                    window.fotos3.push(['img/blanc.png', 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg')]);
-                } else {
-                    window.fotos1.push(['img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'),
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'), 
-                                        'img/blanc.png']);
-                    window.fotos2.push(['img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'), 
-                                        'img/blanc.png']);
-                };
-            };
-            if (proj[i].view[j].length == 3){
-                if (proj[i].type == 'design') {
-                    window.fotos2.push(['img/'.concat(proj[i].dir, '/', proj[i].view[j][0], '.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][2], '.jpg')]);
-                    window.fotos3.push(['img/'.concat(proj[i].dir, '/', proj[i].view[j][0], '.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], '.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][2], 'wb.jpg')]);
-                } else {
-                    window.fotos1.push(['img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], '.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][2], '.jpg')]);
-                    window.fotos2.push(['img/'.concat(proj[i].dir, '/', proj[i].view[j][0], '.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][2], '.jpg')]);
-                };
-            };
-            j++;
-        };
-        i++;
-    };
-    $('#debug').append('4');
-}
 
 function get_proj(name){
     var index ;
