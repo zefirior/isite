@@ -10,7 +10,7 @@
     border:0px black solid;
 }
 
-.td_center {
+.td_center, #sl2 {
     width:370px;
 }
 
@@ -34,6 +34,7 @@ div.img {
 }
 
 #idl1, #idl2, #idl3, #idl_price, #idl_title, .switcher {
+    vertical-align: center;
     display: none;
 }
 

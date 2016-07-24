@@ -6,14 +6,13 @@ var foto;
 var list;
 var timeout_id;
 var time_close_id;
+var focus_pr;
 var activ_proj_menu = 0;
 
 
 $(document).ready(function (){
     init_view();
-    $('#il1 img').click(function(){img_select();});
-    $('#il2 img').click(function(){img_select();});
-    $('#il3 img').click(function(){img_select();});
+    $('.img').click(function(){img_select();});
     $('#fl1').hover(function(){select('#fl1', 1)}, function(){unselect('#fl1', '#idl1')});
     $('#fl2').hover(function(){select('#fl2', 1)}, function(){proj_list_close()});
     $('#fl3').hover(function(){select('#fl3', 1)}, function(){unselect('#fl3', '#idl3')});
@@ -35,6 +34,8 @@ $(document).ready(function (){
     $('#proj2').hover(function(){select('#proj2', 1);}, function(){select('#proj2', 0);});
     $('#proj3').hover(function(){select('#proj3', 1);}, function(){select('#proj3', 0);});
     $('#proj4').hover(function(){select('#proj4', 1);}, function(){select('#proj4', 0);});
+    $('#left').click(next);
+    $('#right').click(next);
     img_show();
     setInterval("img_show()", 6300);
     if((document.documentElement.clientHeight / 2 - 275) > 0){
