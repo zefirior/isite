@@ -11,10 +11,10 @@ function img_unclear(){
     $('#il3').css('display', 'block');
 }
 
-function img_clear_slow(){
-    $('#il1').fadeOut(1000);
-    $('#il2').fadeOut(1000);
-    $('#il3').fadeOut(1000);
+function img_clear_slow(num){
+    $('#il1').fadeOut(num);
+    $('#il2').fadeOut(num);
+    $('#il3').fadeOut(num);
 }
 
 function img_select(){
@@ -45,7 +45,7 @@ function app(){
 function img_show(){
     if(window.activ) {
         
-        window.time_close_id = setTimeout("img_clear_slow()", 5000);
+        window.time_close_id = setTimeout("img_clear_slow(1000)", 5000);
         
         var tmp;
         do {

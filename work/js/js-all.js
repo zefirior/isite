@@ -32,13 +32,18 @@ function deactivate_menu (){
     $('#il3 img').mouseover(function(){img_unclear();});
 }
 
-function menu_click(id, list){
-    $('.list').css('display', 'none');
+function open_menu (list){
+    $(list).fadeIn(500);
+}
+
+function menu_click (id, list){
+    $('.list').fadeOut(500);
     if (id != '#fl2'){close_menu();};
     if (id == '#fl2'){activate_menu ();};
     window.activ = 0;
-    img_clear();
-    $(list).css("display", "block")
+    img_clear_slow(500);
+    setTimeout("open_menu('".concat(list, "')"), 550);
+    //$(list).fadeIn(500);
 }
 
 function activate(){
@@ -73,11 +78,11 @@ function show_proj(proj_name){
         $('#il1 img').attr({src: 'img/blanc.png'});
         $('#il3 img').attr({src: 
             'img/'.concat(obj.dir, '/', obj.view[0][obj.view[0].length - 1], 'wb.jpg')});
-        if (obj.view[0].length > 1) {
+        if (obj.view.length > 1) {
             $('#right').css('display', 'block');
         }
     } else {
-        if (obj.view[0].length > 1) {
+        if (obj.view.length > 1) {
             $('#left').css('display', 'block');
         }
         $('#il1 img').attr({src: 'img/'.concat(obj.dir, '/', obj.view[0][0], 'wb.jpg')});
@@ -112,9 +117,9 @@ function reset() {
 }
 
 function func_reset() {
-    $('.list').css('display', 'none');
+    $('.list').fadeOut(500);
     $('#right').css('display', 'none');
     $('#left').css('display', 'none');
-    img_clear();
+    img_clear_slow();
     activate();
 }
