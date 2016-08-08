@@ -9,12 +9,17 @@ var time_close_id;
 var focus_pr;
 var activ_proj_menu = 0;
 var reset_id;
+var timeout = 300;
+var menu_timeout;
+var img_timeout;
 
 
 $(document).ready(function (){
     init_view();
     $('.img').click(function(){img_select();});
     $('.img').mouseover(function(){img_unclear();});
+    $('.img').mouseover(img_select_with_delay);
+    $('.img').mouseout(function(){clearTimeout(window.img_timeout);});
     $('.button').mouseover(reset);
     $('#fl1').hover(function(){select('#fl1', 1)}, function(){select('#fl1', 0)});
     $('#fl2').hover(function(){select('#fl2', 1)}, function(){select('#fl2', 0)});
@@ -36,6 +41,12 @@ $(document).ready(function (){
     $('#proj8').mouseover(function(){show_proj('private_house');});
     $('#proj9').mouseover(function(){show_proj('sniff_house');});
     $('#proj10').mouseover(function(){show_proj('townhouse');});
+    $('#fl1').mouseover(function(){select_with_delay('#fl1', '#idl1');});
+    $('#fl2').mouseover(function(){select_with_delay('#fl2', '#idl2');});
+    $('#fl3').mouseover(function(){select_with_delay('#fl3', '#idl3');});
+    $('#sl2').mouseover(function(){select_with_delay('#sl2', '#idl_price');});
+    $('#title').mouseover(function(){select_with_delay('#title', '#idl_title');});
+    $('.block').mouseout(function(){clearTimeout(window.menu_timeout);});
     $('#proj1').hover(function(){select('#proj1', 1);}, function(){select('#proj1', 0);});
     $('#proj2').hover(function(){select('#proj2', 1);}, function(){select('#proj2', 0);});
     $('#proj3').hover(function(){select('#proj3', 1);}, function(){select('#proj3', 0);});
@@ -60,16 +71,12 @@ $(document).ready(function (){
 
 
 function init_view() {
-    $('#debug').append('0');
     var proj = window.projects2;
     var i = 0;
     var j;
-    $('#debug').append('5');
     while (i < proj.length) {
         j = 0;
-        $('#debug').append('1');
         while (j < proj[i].view.length) {
-            $('#debug').append('2');
             if (proj[i].view[j].length == 1){
                 if (proj[i].type == 'design') {
                     window.fotos3.push(['img/blanc.png', 
@@ -119,5 +126,4 @@ function init_view() {
         };
         i++;
     };
-    $('#debug').append('4');
 }

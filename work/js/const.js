@@ -39,7 +39,7 @@ var projects2 = [   {dir : 'one_room_flat',
                                 ['7a', '7b']]        
                     },
                     {dir : 'admin_house',
-                     type : 'design',
+                     type : 'architecture',
                      view : [
                                 ['1a', '1b'], 
                                 ['2a', '2b'], 
@@ -61,7 +61,7 @@ var projects2 = [   {dir : 'one_room_flat',
                             ]
                     },
                     {dir : 'private_house',
-                     type : 'design',
+                     type : 'architecture',
                      view : [
                                 ['33a', '33b'], 
                                 ['34a', '34b'], 
@@ -76,9 +76,9 @@ var projects2 = [   {dir : 'one_room_flat',
                             ]        
                     },
                     {dir : 'townhouse',
-                     type : 'design',
+                     type : 'architecture',
                      view : [
-                                ['24a', '25b'], 
+                                ['24a', '24b'], 
                                 ['25a', '25b']
                             ]        
                     },

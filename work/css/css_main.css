@@ -14,9 +14,14 @@
     width:370px;
 }
 
+.block {
+    height:15px;
+    opacity: 0
+}
+
 .content {
     vertical-align:top;
-    height:410px;    
+    height:420px;    
 }
 
 div.img {
@@ -39,7 +44,7 @@ div.img {
 }
 
 #idl3 p {
-    margin-top:120px;
+    margin-top:80px;
 }
 
 #idl2, #idl_price, #idl_title {

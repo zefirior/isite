@@ -6,6 +6,7 @@ function img_clear(){
 }
 
 function img_unclear(){
+    $('.list').css('display', 'none');
     $('#il1').css('display', 'block');
     $('#il2').css('display', 'block');
     $('#il3').css('display', 'block');
@@ -69,16 +70,10 @@ function img_show(){
 }
 
 
-function get_proj(name){
-    var index ;
-    var i = 0;
-    var proj = window.projects2;
-    while (i < proj.length) {
-        if (name == proj[i].dir){index = i; break;};
-        i++;}
-    return proj[index];
+function img_select_with_delay(){
+    clearTimeout(window.img_timeout);
+    window.img_timeout = setTimeout(img_select, 1000);
 }
-
 
 
 //$('#debug').append('<b>' + list[foto] + '</b>');
