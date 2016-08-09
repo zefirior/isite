@@ -1,3 +1,8 @@
+@font-face {
+ font-family: 'Simkai';
+ src: url('simkai.ttf'); 
+}
+
 .body {
     position:absolute;
 }
@@ -8,10 +13,12 @@
 
 .body * {
     border:0px black solid;
+    font-family: 'Simkai', 'Georgia', serif;
+    letter-spacing: 0px;
 }
 
 .td_center, #sl2 {
-    width:370px;
+    width:385px;
 }
 
 .block {
@@ -43,8 +50,13 @@ div.img {
     display: none;
 }
 
-#idl3 p {
-    margin-top:80px;
+#idl3 p, #idl1 p {
+    margin-top:20px;
+}
+
+.rub {
+    height:12px;
+    width:8px;
 }
 
 #idl2, #idl_price, #idl_title {
