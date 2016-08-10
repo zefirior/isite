@@ -6,6 +6,7 @@ var projects = {
 };
 
 var projects2 = [   {dir : 'one_room_flat',
+                     html_name : "<p>Однокомнатная квартира в г.Уфа</p>",
                      type : 'design',
                      view : [
                                 ['1a', '1b'], 
@@ -14,6 +15,7 @@ var projects2 = [   {dir : 'one_room_flat',
                                 ['4a', '4b']]        
                     },
                     {dir : 'aeroport',
+                     html_name : "<p>Международный терминал<br />аэропорта «Уфа»</p>",
                      type : 'architecture',
                      view : [
                                 ['8a', '8b'], 
@@ -21,6 +23,7 @@ var projects2 = [   {dir : 'one_room_flat',
                                 ['10a', '10b']]        
                     },
                     {dir : 'hospital',
+                     html_name : "<p>Городская Клиническая больница № <span class='eNum'>13</span>палата класса люкс</p>",
                      type : 'design',
                      view : [
                                 ['1a', '1b'], 
@@ -28,6 +31,7 @@ var projects2 = [   {dir : 'one_room_flat',
                                 ['3a', '3b']]        
                     },
                     {dir : 'che_guevara',
+                     html_name : "<p>Кофейня <span class='eNum'>«Che Guevara»</span><br />в аеропорту «Уфа»</p>",
                      type : 'design',
                      view : [
                                 ['1a', '1b'], 
@@ -39,6 +43,7 @@ var projects2 = [   {dir : 'one_room_flat',
                                 ['7a', '7b']]        
                     },
                     {dir : 'admin_house',
+                     html_name : "<p>Административное здание в г.Уфа</p>",
                      type : 'architecture',
                      view : [
                                 ['1a', '1b'], 
@@ -46,12 +51,14 @@ var projects2 = [   {dir : 'one_room_flat',
                             ]        
                     },
                     {dir : 'health_ufa',
+                     html_name : "<p>Поликлиника «Будь Здоров» в г.Уфа</p>",
                      type : 'design',
                      view : [
                                 ['1a', '1b'], 
                             ]        
                     },
                     {dir : 'numbercity',
+                     html_name : "<p>Офисное помещение компании «Цифроград» в г.Уфа</p>",
                      type : 'design',
                      view : [
                                 ['20a', '20b'], 
@@ -61,6 +68,7 @@ var projects2 = [   {dir : 'one_room_flat',
                             ]
                     },
                     {dir : 'private_house',
+                     html_name : "<p>Частный дом</p>",
                      type : 'architecture',
                      view : [
                                 ['33a', '33b'], 
@@ -68,6 +76,7 @@ var projects2 = [   {dir : 'one_room_flat',
                             ]        
                     },
                     {dir : 'sniff_house',
+                     html_name : "<p>Кальянная (Уфа, ул. Набережная)</p>",
                      type : 'design',
                      view : [
                                 ['26a', '26b'], 
@@ -76,6 +85,7 @@ var projects2 = [   {dir : 'one_room_flat',
                             ]        
                     },
                     {dir : 'townhouse',
+                     html_name : "<p>Таунхаус в Уфимском р-не</p>",
                      type : 'architecture',
                      view : [
                                 ['24a', '24b'], 

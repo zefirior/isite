@@ -46,6 +46,7 @@ function menu_click (id, list){
     if (id == '#fl2'){activate_menu ();};
     window.activ = 0;
     img_clear_slow(window.timeout);
+    caption_clr();
     setTimeout("open_menu('".concat(list, "')"), window.timeout + 50);
     //$(list).fadeIn(500);
 }
@@ -90,6 +91,7 @@ function get_proj(name){
 function show_proj(proj_name){
     window.focus_pr = get_proj(proj_name);
     obj = window.focus_pr;
+    caption(proj_name);
     clearTimeout(window.time_close_id);
     $('#right').css('display', 'none');
     $('#left').css('display', 'none');
@@ -147,9 +149,26 @@ function reset() {
 }
 
 function func_reset() {
+    caption_clr();
     $('.list').fadeOut(window.timeout);
     $('#right').css('display', 'none');
     $('#left').css('display', 'none');
     img_clear_slow();
     activate();
+}
+
+function caption(proj_name){
+    obj = get_proj(proj_name);
+    if (obj.type == 'design') {
+        $('#captionL').html('');
+        $('#captionR').html(obj.html_name);
+    } else {
+        $('#captionR').html('');
+        $('#captionL').html(obj.html_name);
+    };
+}
+
+function caption_clr(){
+    $('#captionR').html('');
+    $('#captionL').html('');
 }

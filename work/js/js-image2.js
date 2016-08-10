@@ -35,11 +35,11 @@ function img_unselect(tag){
 /*var id_img = obj.getAttribute();*/
 }
 
-/*
-function app(){
-    $('#debug').append('<b>7</b>');
+
+function app(num){
+    $('#debug').append('<b>'.concat(num, '</b>'));
 }
-*/
+
 
 
 
