@@ -54,6 +54,10 @@ div.img {
     display: none;
 }
 
+#fl1 #fl2 #fl3 #sl2 #title{
+    font-weight: bold;
+}
+
 #idl3 p, #idl1 p {
     margin-top:20px;
 }

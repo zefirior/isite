@@ -45,6 +45,10 @@ function menu_click (id, list){
     if (id != '#fl2'){close_menu();};
     if (id == '#fl2'){activate_menu ();};
     window.activ = 0;
+    $('.button').css('font-weight', 'normal');
+    $('.button').css('text-transform', 'lowercase');
+    $(id).css('font-weight', 'bold');
+    $(id).css('text-transform', 'capitalize');
     img_clear_slow(window.timeout);
     caption_clr();
     setTimeout("open_menu('".concat(list, "')"), window.timeout + 50);
@@ -153,6 +157,8 @@ function func_reset() {
     $('.list').fadeOut(window.timeout);
     $('#right').css('display', 'none');
     $('#left').css('display', 'none');
+    $('.button').css('font-weight', 'normal');
+    $('.button').css('text-transform', 'lowercase');
     img_clear_slow();
     activate();
 }

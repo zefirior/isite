@@ -79,47 +79,87 @@ function init_view() {
         while (j < proj[i].view.length) {
             if (proj[i].view[j].length == 1){
                 if (proj[i].type == 'design') {
-                    window.fotos3.push(['img/blanc.png', 
-                                        'img/blanc.png', 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg')]);
+                    window.fotos3.push({0:'img/blanc.png', 
+                                        1:'img/blanc.png', 
+                                        2:'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'),
+                                        'type': proj[i].type,
+                                        'html': proj[i].html_name,
+                                        'proj_name': proj[i].dir
+                                        });
                 } else {
-                    window.fotos1.push(['img/'.concat(proj[i].dir,'/', proj[i].view[j][0], 'wb.jpg'), 
-                                        'img/blanc.png', 
-                                        'img/blanc.png']);
+                    window.fotos1.push({0:'img/'.concat(proj[i].dir,'/', proj[i].view[j][0], 'wb.jpg'), 
+                                        1:'img/blanc.png', 
+                                        2:'img/blanc.png',
+                                        'type': proj[i].type,
+                                        'html': proj[i].html_name,
+                                        'proj_name': proj[i].dir
+                                        });
                 };
             };
             if (proj[i].view[j].length == 2){
                 if (proj[i].type == 'design') {
-                    window.fotos2.push(['img/blanc.png', 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg')]);
-                    window.fotos3.push(['img/blanc.png', 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg')]);
+                    window.fotos2.push({0:'img/blanc.png', 
+                                        1:'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'), 
+                                        2:'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'),
+                                        'type': proj[i].type,
+                                        'html': proj[i].html_name,
+                                        'proj_name': proj[i].dir
+                                        });
+                    window.fotos3.push({0:'img/blanc.png', 
+                                        1:'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'), 
+                                        2:'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'),
+                                        'type': proj[i].type,
+                                        'html': proj[i].html_name,
+                                        'proj_name': proj[i].dir
+                                        });
                 } else {
-                    window.fotos1.push(['img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'),
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'), 
-                                        'img/blanc.png']);
-                    window.fotos2.push(['img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'), 
-                                        'img/blanc.png']);
+                    window.fotos1.push({0:'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'),
+                                        1:'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'), 
+                                        2:'img/blanc.png',
+                                        'type': proj[i].type,
+                                        'html': proj[i].html_name,
+                                        'proj_name': proj[i].dir
+                                        });
+                    window.fotos2.push({0:'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'), 
+                                        1:'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'), 
+                                        2:'img/blanc.png',
+                                        'type': proj[i].type,
+                                        'html': proj[i].html_name,
+                                        'proj_name': proj[i].dir
+                                        });
                 };
             };
             if (proj[i].view[j].length == 3){
                 if (proj[i].type == 'design') {
-                    window.fotos2.push(['img/'.concat(proj[i].dir, '/', proj[i].view[j][0], '.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][2], '.jpg')]);
-                    window.fotos3.push(['img/'.concat(proj[i].dir, '/', proj[i].view[j][0], '.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], '.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][2], 'wb.jpg')]);
+                    window.fotos2.push({0:'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], '.jpg'), 
+                                        1:'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'), 
+                                        2:'img/'.concat(proj[i].dir, '/', proj[i].view[j][2], '.jpg'),
+                                        'type': proj[i].type,
+                                        'html': proj[i].html_name,
+                                        'proj_name': proj[i].dir
+                                        });
+                    window.fotos3.push({0:'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], '.jpg'), 
+                                        1:'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], '.jpg'), 
+                                        2:'img/'.concat(proj[i].dir, '/', proj[i].view[j][2], 'wb.jpg'),
+                                        'type': proj[i].type,
+                                        'html': proj[i].html_name,
+                                        'proj_name': proj[i].dir
+                                        });
                 } else {
-                    window.fotos1.push(['img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], '.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][2], '.jpg')]);
-                    window.fotos2.push(['img/'.concat(proj[i].dir, '/', proj[i].view[j][0], '.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'), 
-                                        'img/'.concat(proj[i].dir, '/', proj[i].view[j][2], '.jpg')]);
+                    window.fotos1.push({0:'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], 'wb.jpg'), 
+                                        1:'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], '.jpg'), 
+                                        2:'img/'.concat(proj[i].dir, '/', proj[i].view[j][2], '.jpg'),
+                                        'type': proj[i].type,
+                                        'html': proj[i].html_name,
+                                        'proj_name': proj[i].dir
+                                        });
+                    window.fotos2.push({0:'img/'.concat(proj[i].dir, '/', proj[i].view[j][0], '.jpg'), 
+                                        1:'img/'.concat(proj[i].dir, '/', proj[i].view[j][1], 'wb.jpg'), 
+                                        2:'img/'.concat(proj[i].dir, '/', proj[i].view[j][2], '.jpg'),
+                                        'type': proj[i].type,
+                                        'html': proj[i].html_name,
+                                        'proj_name': proj[i].dir
+                                        });
                 };
             };
             j++;

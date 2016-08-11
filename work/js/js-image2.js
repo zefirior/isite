@@ -65,6 +65,7 @@ function img_show(){
         $('#il1 img').attr({src: list[view][0]});
         $('#il2 img').attr({src: list[view][1]});
         $('#il3 img').attr({src: list[view][2]});
+        caption(list[view]['proj_name']);
         $(id_img).fadeIn(1000);
     }
 }
