@@ -16,10 +16,12 @@ var img_timeout;
 
 $(document).ready(function (){
     init_view();
+    generate_proj_view();
     $('.img').click(function(){img_select();});
     $('.img').mouseover(function(){img_unclear();});
     $('.img').mouseover(img_select_with_delay);
     $('.img').mouseout(function(){clearTimeout(window.img_timeout);});
+    $('#slide').click(func_reset);
     $('.button').mouseover(reset);
     $('#fl1').hover(function(){select('#fl1', 1)}, function(){select('#fl1', 0)});
     $('#fl2').hover(function(){select('#fl2', 1)}, function(){select('#fl2', 0)});
@@ -31,16 +33,16 @@ $(document).ready(function (){
     $('#fl3').click(function(){menu_click('#fl3', '#idl3');});
     $('#sl2').click(function(){menu_click('#sl2', '#idl_price');});
     $('#title').click(function(){menu_click('#title', '#idl_title');});
-    $('#proj1').mouseover(function(){show_proj('aeroport');});
-    $('#proj2').mouseover(function(){show_proj('one_room_flat');});
-    $('#proj3').mouseover(function(){show_proj('che_guevara');});
-    $('#proj4').mouseover(function(){show_proj('hospital');});
-    $('#proj5').mouseover(function(){show_proj('admin_house');});
-    $('#proj6').mouseover(function(){show_proj('health_ufa');});
-    $('#proj7').mouseover(function(){show_proj('numbercity');});
-    $('#proj8').mouseover(function(){show_proj('private_house');});
-    $('#proj9').mouseover(function(){show_proj('sniff_house');});
-    $('#proj10').mouseover(function(){show_proj('townhouse');});
+    $('#proj1').mouseover(function(){show_proj_with_delay('aeroport');});
+    $('#proj2').mouseover(function(){show_proj_with_delay('one_room_flat');});
+    $('#proj3').mouseover(function(){show_proj_with_delay('che_guevara');});
+    $('#proj4').mouseover(function(){show_proj_with_delay('hospital');});
+    $('#proj5').mouseover(function(){show_proj_with_delay('admin_house');});
+    $('#proj6').mouseover(function(){show_proj_with_delay('health_ufa');});
+    $('#proj7').mouseover(function(){show_proj_with_delay('numbercity');});
+    $('#proj8').mouseover(function(){show_proj_with_delay('private_house');});
+    $('#proj9').mouseover(function(){show_proj_with_delay('sniff_house');});
+    $('#proj10').mouseover(function(){show_proj_with_delay('townhouse');});
     $('#fl1').mouseover(function(){select_with_delay('#fl1', '#idl1');});
     $('#fl2').mouseover(function(){select_with_delay('#fl2', '#idl2');});
     $('#fl3').mouseover(function(){select_with_delay('#fl3', '#idl3');});
@@ -59,13 +61,14 @@ $(document).ready(function (){
     $('#proj10').hover(function(){select('#proj10', 1);}, function(){select('#proj10', 0);});
     $('#left').click(next);
     $('#right').click(next);
+    func_reset();
     img_show();
     setInterval("img_show()", 6300);
     if((document.documentElement.clientHeight / 2 - 275) > 0){
         $('.body').css("top", ((document.documentElement.clientHeight / 2 - 300)*0.6));
     };
-    if((document.documentElement.clientWidth / 2 - 590) > 0){
-        $('.body').css("left", (document.documentElement.clientWidth / 2 - 590));
+    if((document.documentElement.clientWidth / 2 - 570) > 0){
+        $('.body').css("left", (document.documentElement.clientWidth / 2 - 570));
     };
 });
 
@@ -164,6 +167,21 @@ function init_view() {
             };
             j++;
         };
+        i++;
+    };
+}
+
+function generate_proj_view(){
+    var proj = window.projects2;
+    var i = 0;
+    while (i < proj.length) {
+        if (proj[i].type == 'design'){
+            align = 'right';
+            }else{
+                align = 'left';
+                };
+        content = "<p id='".concat(proj[i].id.slice(1), "' class='proj button' style='text-align:", align,"'>", proj[i].html_name, "</p>");
+        $('#idl2').append(content);
         i++;
     };
 }

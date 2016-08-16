@@ -57,7 +57,11 @@ function menu_click (id, list){
 
 function select_with_delay(id, list){
     clearTimeout(window.menu_timeout);
-    window.menu_timeout = setTimeout("menu_click('".concat(id, "', '", list, "')"), 1000);
+    window.menu_timeout = setTimeout("menu_click('".concat(id, "', '", list, "')"), 300);
+}
+
+function show_proj_with_delay(proj_name){
+    window.menu_timeout = setTimeout("show_proj('".concat(proj_name, "')"), 200);
 }
 
 function activate(){
@@ -97,6 +101,10 @@ function show_proj(proj_name){
     obj = window.focus_pr;
     caption(proj_name);
     clearTimeout(window.time_close_id);
+    $('.proj').css('font-weight', 'normal');
+    $('.proj').css('text-transform', 'lowercase');
+    $(obj.id).css('font-weight', 'bold');
+    $(obj.id).css('text-transform', 'none');
     $('#right').css('display', 'none');
     $('#left').css('display', 'none');
     if (obj.type == 'design') {
@@ -132,24 +140,24 @@ function next(){
         };
         $('#il1 img').attr({src: 'img/blanc.png'});
         $('#il2 img').attr({src: (
-            'img/'.concat(obj.dir, '/', obj.view[0][obj.view[0].length - 2], 'wb.jpg') ? 
-            'img/'.concat(obj.dir, '/', obj.view[0][obj.view[0].length - 2], 'wb.jpg') : 
+            'img/'.concat(obj.dir, '/', obj.view[0][obj.view[0].length - 2], '.jpg') ? 
+            'img/'.concat(obj.dir, '/', obj.view[0][obj.view[0].length - 2], '.jpg') : 
             'img/blanc.png')});
         $('#il3 img').attr({src: 
-            'img/'.concat(obj.dir, '/', obj.view[0][obj.view[0].length - 1], 'wb.jpg')});
+            'img/'.concat(obj.dir, '/', obj.view[0][obj.view[0].length - 1], '.jpg')});
     } else {
         if (obj.view[0].length > 1) {
             $('#left').css('display', 'block');
         }
-        $('#il1 img').attr({src: 'img/'.concat(obj.dir, '/', obj.view[0][0], 'wb.jpg')});
-        $('#il2 img').attr({src: 'img/'.concat(obj.dir, '/', obj.view[0][1], 'wb.jpg')});
+        $('#il1 img').attr({src: 'img/'.concat(obj.dir, '/', obj.view[0][0], '.jpg')});
+        $('#il2 img').attr({src: 'img/'.concat(obj.dir, '/', obj.view[0][1], '.jpg')});
         $('#il3 img').attr({src: 'img/blanc.png'});
     };
 }
 
 function reset() {
     clearTimeout(window.reset_id);
-    window.reset_id = setTimeout("func_reset()", 10000);
+    window.reset_id = setTimeout("func_reset()", 15000);
 }
 
 function func_reset() {
@@ -167,10 +175,10 @@ function caption(proj_name){
     obj = get_proj(proj_name);
     if (obj.type == 'design') {
         $('#captionL').html('');
-        $('#captionR').html(obj.html_name);
+        $('#captionR').html("<p style='letter-spacing: 8px; font-size: 10pt; opacity: 0.7'>".concat(obj.html_name, "</ p>"));
     } else {
         $('#captionR').html('');
-        $('#captionL').html(obj.html_name);
+        $('#captionL').html("<p style='letter-spacing: 8px; font-size: 10pt; opacity: 0.7'>".concat(obj.html_name, "</ p>"));
     };
 }
 

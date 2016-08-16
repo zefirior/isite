@@ -5,8 +5,9 @@ var projects = {
     'proj4' : ["img/10.jpg", "img/1.jpg", "img/5.jpg"]
 };
 
-var projects2 = [   {dir : 'one_room_flat',
-                     html_name : "<p>Однокомнатная квартира в г.Уфа</p>",
+var projects2 = [   {id : '#proj2',
+                    dir : 'one_room_flat',
+                     html_name : "Однокомнатная квартира в г.Уфа",
                      type : 'design',
                      view : [
                                 ['1a', '1b'], 
@@ -14,24 +15,27 @@ var projects2 = [   {dir : 'one_room_flat',
                                 ['3a', '3b'], 
                                 ['4a', '4b']]        
                     },
-                    {dir : 'aeroport',
-                     html_name : "<p>Международный терминал<br />аэропорта «Уфа»</p>",
+                    {id : '#proj1',
+                     dir : 'aeroport',
+                     html_name : "Международный терминал<br />аэропорта «Уфа»",
                      type : 'architecture',
                      view : [
                                 ['8a', '8b'], 
                                 ['9a', '9b'], 
                                 ['10a', '10b']]        
                     },
-                    {dir : 'hospital',
-                     html_name : "<p>Городская Клиническая больница № <span class='eNum'>13</span>палата класса люкс</p>",
+                    {id : '#proj4',
+                    dir : 'hospital',
+                     html_name : "Городская Клиническая больница&nbsp;№&nbsp;13 палата класса люкс",
                      type : 'design',
                      view : [
                                 ['1a', '1b'], 
                                 ['2a', '2b'], 
                                 ['3a', '3b']]        
                     },
-                    {dir : 'che_guevara',
-                     html_name : "<p>Кофейня <span class='eNum'>«Che Guevara»</span><br />в аеропорту «Уфа»</p>",
+                    {id : '#proj3',
+                    dir : 'che_guevara',
+                     html_name : "Кофейня «Che Guevara»<br />в аэропорту «Уфа»",
                      type : 'design',
                      view : [
                                 ['1a', '1b'], 
@@ -42,23 +46,26 @@ var projects2 = [   {dir : 'one_room_flat',
                                 ['6a', '6b'], 
                                 ['7a', '7b']]        
                     },
-                    {dir : 'admin_house',
-                     html_name : "<p>Административное здание в г.Уфа</p>",
+                    {id : '#proj5',
+                    dir : 'admin_house',
+                     html_name : "Административное здание в г.Уфа",
                      type : 'architecture',
                      view : [
                                 ['1a', '1b'], 
                                 ['2a', '2b'], 
                             ]        
                     },
-                    {dir : 'health_ufa',
-                     html_name : "<p>Поликлиника «Будь Здоров» в г.Уфа</p>",
+                    {id : '#proj6',
+                    dir : 'health_ufa',
+                     html_name : "Поликлиника «Будь Здоров» в г.Уфа",
                      type : 'design',
                      view : [
                                 ['1a', '1b'], 
                             ]        
                     },
-                    {dir : 'numbercity',
-                     html_name : "<p>Офисное помещение компании «Цифроград» в г.Уфа</p>",
+                    {id : '#proj7',
+                    dir : 'numbercity',
+                     html_name : "Офисное помещение компании «Цифроград»&nbsp;в&nbsp;г.Уфа",
                      type : 'design',
                      view : [
                                 ['20a', '20b'], 
@@ -67,16 +74,18 @@ var projects2 = [   {dir : 'one_room_flat',
                                 ['23a', '23b'], 
                             ]
                     },
-                    {dir : 'private_house',
-                     html_name : "<p>Частный дом</p>",
+                    {id : '#proj8',
+                    dir : 'private_house',
+                     html_name : "Частный дом",
                      type : 'architecture',
                      view : [
                                 ['33a', '33b'], 
                                 ['34a', '34b'], 
                             ]        
                     },
-                    {dir : 'sniff_house',
-                     html_name : "<p>Кальянная (Уфа, ул. Набережная)</p>",
+                    {id : '#proj9',
+                    dir : 'sniff_house',
+                     html_name : "Кальянная (Уфа, ул. Набережная)",
                      type : 'design',
                      view : [
                                 ['26a', '26b'], 
@@ -84,8 +93,9 @@ var projects2 = [   {dir : 'one_room_flat',
                                 ['28a', '28b']
                             ]        
                     },
-                    {dir : 'townhouse',
-                     html_name : "<p>Таунхаус в Уфимском р-не</p>",
+                    {id : '#proj10',
+                    dir : 'townhouse',
+                     html_name : "Таун хаус в Уфимском р&#8209;не",
                      type : 'architecture',
                      view : [
                                 ['24a', '24b'], 

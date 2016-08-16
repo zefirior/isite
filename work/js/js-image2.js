@@ -38,6 +38,7 @@ function img_unselect(tag){
 
 function app(num){
     $('#debug').append('<b>'.concat(num, '</b>'));
+    $('#debug').css('font-weight', 'normal');
 }
 
 
@@ -73,7 +74,7 @@ function img_show(){
 
 function img_select_with_delay(){
     clearTimeout(window.img_timeout);
-    window.img_timeout = setTimeout(img_select, 1000);
+    window.img_timeout = setTimeout(img_select, 600);
 }
 
 

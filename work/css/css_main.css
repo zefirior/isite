@@ -1,7 +1,32 @@
 @font-face {
+    font-family: 'Simkai';
+    src: local('Arimo'), url('arimo.woff2') format('woff2'), url('arimo.woff') format('woff'), url('arimo.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Simkai';
+    src: local('Arimo Italic'), local('Arimo-Italic'), url('arimoitalic.woff2') format('woff2'), url('arimoitalic.woff') format('woff'), url('arimoitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Simkai';
+    src: local('Arimo Bold'), local('Arimo-Bold'), url('arimobold.woff2') format('woff2'), url('arimobold.woff') format('woff'), url('arimobold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Simkai';
+    src: local('Arimo Bold Italic'), local('Arimo-BoldItalic'), url('arimobolditalic.woff2') format('woff2'), url('arimobolditalic.woff') format('woff'), url('arimobolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/*@font-face {
  font-family: 'Simkai';
  src: url('simkai.ttf'); 
-}
+}*/
 
 .body {
     position:absolute;
@@ -14,11 +39,28 @@
 .body * {
     border:0px black solid;
     font-family: 'Simkai', 'Georgia', serif;
-    letter-spacing: -4px;
+    letter-spacing: 0px;
 }
 
-.eNum {
-    letter-spacing: 0px;
+.button .eNum {
+    letter-spacing: 18px;
+    font-size: 12pt;
+}
+
+#title .eNum {
+    letter-spacing: 18px;
+    font-size: 18pt;
+}
+
+.contacts #telephone{
+    letter-spacing: 4px;
+    font-size: 13pt;
+}
+
+.contacts #email{
+    letter-spacing: 4px;
+    font-size: 11pt;
+    font-weight: bold;
 }
 
 .td_center, #sl2 {
@@ -32,7 +74,7 @@
 
 .content {
     vertical-align:top;
-    height:420px;    
+    height:405px;    
 }
 
 div.img {
@@ -49,6 +91,11 @@ div.img {
     width:50px;
 }
 
+#slide {
+    height:30px;
+    width:30px;
+}
+
 #idl1, #idl2, #idl3, #idl_price, #idl_title, .switcher  {
     vertical-align: middle;
     display: none;
@@ -58,8 +105,12 @@ div.img {
     font-weight: bold;
 }
 
-#idl3 p, #idl1 p {
-    margin-top:20px;
+#idl1 p {
+    margin-top:120px;
+}
+
+#idl3 p{
+    margin-top:60px;
 }
 
 .rub {
@@ -69,6 +120,7 @@ div.img {
 
 #idl2, #idl_price, #idl_title {
     text-align: center;
+    width: 350px;
 }
 
 #idl1 {
@@ -76,7 +128,7 @@ div.img {
 }
 
 #title {
-    width:180px;
+    width:320px;
     }
 
 .proj {
@@ -87,13 +139,23 @@ div.img {
 }
 
 #captionR {
-    text-align: right;
+    text-align: left;
     width:350px;
     height:30px;
 }
 
 #captionL {
-    text-align: left;
+    text-align: right;
     width:350px;
     height:30px;
+}
+
+#fl1 {
+    position: relative;
+    left:20px
+}
+
+#fl3 {
+    position: relative;
+    right:27px
 }
