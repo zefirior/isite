@@ -26,7 +26,7 @@ var projects2 = [   {id : '#proj2',
                     },
                     {id : '#proj4',
                     dir : 'hospital',
-                     html_name : "Городская Клиническая больница&nbsp;№&nbsp;13 палата класса люкс",
+                     html_name : "Городская Клиническая больница&nbsp;№&nbsp;13 палата&nbsp;класса&nbsp;люкс",
                      type : 'design',
                      view : [
                                 ['1a', '1b'], 
