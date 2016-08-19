@@ -7,7 +7,7 @@ var projects = {
 
 var projects2 = [   {id : '#proj2',
                     dir : 'one_room_flat',
-                     html_name : "Однокомнатная квартира в г.Уфа",
+                     html_name : "Функциональное&nbsp;зонирование пространства&nbsp;с&nbsp;помощью корпусной&nbsp;мебели&nbsp;«Mr.Doors»",
                      type : 'design',
                      view : [
                                 ['1a', '1b'], 

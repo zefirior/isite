@@ -65,11 +65,12 @@ $(document).ready(function (){
     img_show();
     setInterval("img_show()", 6300);
     if((document.documentElement.clientHeight / 2 - 275) > 0){
-        $('.body').css("top", ((document.documentElement.clientHeight / 2 - 300)*0.6));
+        $('.body').css("top", ((document.documentElement.clientHeight / 2 - 275)*0.6));
     };
-    if((document.documentElement.clientWidth / 2 - 570) > 0){
-        $('.body').css("left", (document.documentElement.clientWidth / 2 - 570));
+    if((document.documentElement.clientWidth / 2 - 600) > 0){
+        $('.body').css("left", (document.documentElement.clientWidth / 2 - 600));
     };
+    
 });
 
 

@@ -175,10 +175,10 @@ function caption(proj_name){
     obj = get_proj(proj_name);
     if (obj.type == 'design') {
         $('#captionL').html('');
-        $('#captionR').html("<p style='letter-spacing: 8px; font-size: 10pt; opacity: 0.7'>".concat(obj.html_name, "</ p>"));
+        $('#captionR').html("<p style='letter-spacing: 6px; font-size: 10pt; opacity: 0.7'>".concat(obj.html_name, "</ p>"));
     } else {
         $('#captionR').html('');
-        $('#captionL').html("<p style='letter-spacing: 8px; font-size: 10pt; opacity: 0.7'>".concat(obj.html_name, "</ p>"));
+        $('#captionL').html("<p style='letter-spacing: 6px; font-size: 10pt; opacity: 0.7'>".concat(obj.html_name, "</ p>"));
     };
 }
 
