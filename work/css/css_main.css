@@ -132,10 +132,12 @@ div.img {
     }
 
 .proj {
-    margin-top:0px;
-    margin-bottom:0px;
-    padding-top:5px;
-    padding-bottom:5px;
+    vertical-align:middle;
+}
+
+.container_proj {
+    height:80px;
+    border:1px white solid;
 }
 
 #captionR {
@@ -158,4 +160,13 @@ div.img {
 #fl3 {
     position: relative;
     right:27px
+}
+
+#ref {
+    position: relative;
+}
+
+#next-proj {
+    width:40px;
+    height:20px;
 }

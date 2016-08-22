@@ -186,3 +186,16 @@ function caption_clr(){
     $('#captionR').html('');
     $('#captionL').html('');
 }
+
+function next_proj(){
+    $('.container_proj:first-child').remove()
+    var proj = window.projects2;
+    var i = 0;
+    if (proj[i].type == 'design'){
+        align = 'right';
+        }else{
+            align = 'left';
+            };
+    content = "<div class='container_proj'><p id='".concat(proj[i].id.slice(1), "' class='proj button' style='text-align:", align,"'>", proj[i].html_name, "</p></div>");
+    $('#proj_wrap').append(content);
+}
