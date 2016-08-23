@@ -189,13 +189,27 @@ function caption_clr(){
 
 function next_proj(){
     $('.container_proj:first-child').remove()
+    id = $('.container_proj:last-child p').attr('id');
     var proj = window.projects2;
+    var item = 0;
     var i = 0;
-    if (proj[i].type == 'design'){
+    while (i < proj.length) {
+        if(proj[i].id.slice(1) == id){
+            item = i % (proj.length - 1) + 1;
+            break;
+        };
+        i++;
+    };
+    if (proj[item].type == 'design'){
         align = 'right';
         }else{
             align = 'left';
             };
-    content = "<div class='container_proj'><p id='".concat(proj[i].id.slice(1), "' class='proj button' style='text-align:", align,"'>", proj[i].html_name, "</p></div>");
+    content = "<div class='container_proj'><p id='".concat(proj[item].id.slice(1), "' class='proj button' style='text-align:", align,"'>", proj[item].html_name, "</p></div>");
     $('#proj_wrap').append(content);
+    $(proj[item].id).mouseover({dir: proj[item].dir}, function(event){show_proj_with_delay(event.data.dir);});
+    $(proj[item].id).mouseover({id: proj[item].id}, function(event){select(event.data.id, 1);});
+    $(proj[item].id).mouseout({id: proj[item].id}, function(event){select(event.data.id, 0);});
+    $(proj[item].id).css('font-weight', 'normal');
+    $(proj[item].id).css('text-transform', 'lowercase');
 }

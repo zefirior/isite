@@ -16,7 +16,6 @@ var img_timeout;
 
 $(document).ready(function (){
     init_view();
-    generate_proj_view();
     $('.img').click(function(){img_select();});
     $('.img').mouseover(function(){img_unclear();});
     $('.img').mouseover(img_select_with_delay);
@@ -73,7 +72,7 @@ $(document).ready(function (){
     if((document.documentElement.clientWidth / 2 - 600) > 0){
         $('.body').css("left", (document.documentElement.clientWidth / 2 - 600));
     };
-    
+    generate_proj_view();
 });
 
 function generate_proj_view(){
@@ -87,8 +86,9 @@ function generate_proj_view(){
                 };
         content = "<div class='container_proj'><p id='".concat(proj[i].id.slice(1), "' class='proj button' style='text-align:", align,"'>", proj[i].html_name, "</p></div>");
         $('#proj_wrap').append(content);
-        $(proj[i].id).mouseover("show_proj_with_delay('".concat(proj[i].dir, "')"));
-        $(proj[i].id).hover("select('".concat(proj[i].id, "', 1)"), "select('".concat(proj[i].id, "', 0)"));
+        $(proj[i].id).mouseover({dir: proj[i].dir}, function(event){show_proj_with_delay(event.data.dir);});
+        $(proj[i].id).mouseover({id: proj[i].id}, function(event){select(event.data.id, 1);});
+        $(proj[i].id).mouseout({id: proj[i].id}, function(event){select(event.data.id, 0);});
         i++;
     };
 }

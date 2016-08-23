@@ -5,7 +5,9 @@ var projects = {
     'proj4' : ["img/10.jpg", "img/1.jpg", "img/5.jpg"]
 };
 
-var projects2 = [   {id : '#proj2',
+var container = new Array();
+
+var projects2 = [   {id : '#proj1',
                     dir : 'one_room_flat',
                      html_name : "Функциональное&nbsp;зонирование пространства&nbsp;с&nbsp;помощью корпусной&nbsp;мебели&nbsp;«Mr.Doors»",
                      type : 'design',
@@ -13,16 +15,32 @@ var projects2 = [   {id : '#proj2',
                                 ['1a', '1b'], 
                                 ['2a', '2b'], 
                                 ['3a', '3b'], 
-                                ['4a', '4b']]        
+                                ['4a', '4b']
+                            ]        
                     },
-                    {id : '#proj1',
+                    {id : '#proj2',
                      dir : 'aeroport',
                      html_name : "Международный терминал<br />аэропорта «Уфа»",
                      type : 'architecture',
                      view : [
                                 ['8a', '8b'], 
                                 ['9a', '9b'], 
-                                ['10a', '10b']]        
+                                ['10a', '10b']
+                            ]        
+                    },
+                    {id : '#proj3',
+                     dir : 'aeroport_des',
+                     html_name : "Международный терминал<br />аэропорта «Уфа»",
+                     type : 'design',
+                     view : [
+                                ['1a', '1b'], 
+                                ['2a', '2b'], 
+                                ['3a', '3b'], 
+                                ['4a', '4b'], 
+                                ['5a', '5b'], 
+                                ['6a', '6b'], 
+                                ['7a', '7b']
+                            ]        
                     },
                     {id : '#proj4',
                     dir : 'hospital',
@@ -31,9 +49,10 @@ var projects2 = [   {id : '#proj2',
                      view : [
                                 ['1a', '1b'], 
                                 ['2a', '2b'], 
-                                ['3a', '3b']]        
+                                ['3a', '3b']
+                            ]        
                     },
-                    {id : '#proj3',
+                    {id : '#proj5',
                     dir : 'che_guevara',
                      html_name : "Кофейня «Che Guevara»<br />в аэропорту «Уфа»",
                      type : 'design',
@@ -44,9 +63,10 @@ var projects2 = [   {id : '#proj2',
                                 ['4a', '4b'], 
                                 ['5a', '5b'], 
                                 ['6a', '6b'], 
-                                ['7a', '7b']]        
+                                ['7a', '7b']
+                            ]
                     },
-                    {id : '#proj5',
+                    {id : '#proj6',
                     dir : 'admin_house',
                      html_name : "Административное здание в г.Уфа",
                      type : 'architecture',
@@ -55,7 +75,7 @@ var projects2 = [   {id : '#proj2',
                                 ['2a', '2b'], 
                             ]        
                     },
-                    {id : '#proj6',
+                    {id : '#proj7',
                     dir : 'health_ufa',
                      html_name : "Поликлиника «Будь Здоров» в г.Уфа",
                      type : 'design',
@@ -63,7 +83,7 @@ var projects2 = [   {id : '#proj2',
                                 ['1a', '1b'], 
                             ]        
                     },
-                    {id : '#proj7',
+                    {id : '#proj8',
                     dir : 'numbercity',
                      html_name : "Офисное помещение компании «Цифроград»&nbsp;в&nbsp;г.Уфа",
                      type : 'design',
@@ -74,7 +94,7 @@ var projects2 = [   {id : '#proj2',
                                 ['23a', '23b'], 
                             ]
                     },
-                    {id : '#proj8',
+                    {id : '#proj9',
                     dir : 'private_house',
                      html_name : "Частный дом",
                      type : 'architecture',
@@ -83,7 +103,7 @@ var projects2 = [   {id : '#proj2',
                                 ['34a', '34b'], 
                             ]        
                     },
-                    {id : '#proj9',
+                    {id : '#proj10',
                     dir : 'sniff_house',
                      html_name : "Кальянная (Уфа, ул. Набережная)",
                      type : 'design',
@@ -93,7 +113,7 @@ var projects2 = [   {id : '#proj2',
                                 ['28a', '28b']
                             ]        
                     },
-                    {id : '#proj10',
+                    {id : '#proj11',
                     dir : 'townhouse',
                      html_name : "Таун хаус в Уфимском р&#8209;не",
                      type : 'architecture',
