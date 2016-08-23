@@ -65,13 +65,13 @@ $(document).ready(function (){
     img_show();
     setInterval("img_show()", 6300);
     body_top = (document.documentElement.clientHeight / 2 - 315)*0.6;
-    if((document.documentElement.clientHeight - 637) > 0){
-        $('.body').css("top", (body_top));
-        $('#ref').css("top", (document.documentElement.clientHeight - 670));
-    };
-    if((document.documentElement.clientWidth / 2 - 600) > 0){
-        $('.body').css("left", (document.documentElement.clientWidth / 2 - 600));
-    };
+//    if((document.documentElement.clientHeight - 637) > 0){
+//        $('.body').css("top", (body_top));
+//        $('#ref').css("top", (document.documentElement.clientHeight - 670));
+//    };
+//    if((document.documentElement.clientWidth / 2 - 600) > 0){
+//        $('.body').css("left", (document.documentElement.clientWidth / 2 - 600));
+//    };
     generate_proj_view();
 });
 

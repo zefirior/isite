@@ -15,145 +15,151 @@
     <script type="text/javascript" src="js/const.js"></script>
 </head>
 <body>
-    <div class="body">
-        <table>
-            <tr>
-                <td rowspan="6" width="60">
-                    <div id='left' class="switcher button" >
-                        <img  src="/img/next-left.png" alt="оп">
-                    </div>
-                </td>
-                <td>
-                </td>
-                <td>
-                    <center>
-                        <div>
-                            <h2 id="title" class='button'> <img  class="block" src="/img/lblock.jpg" alt="оп"> <span class="eNum">внутри</span><img  class="block" src="/img/rblock.jpg" alt="оп"> </h2>
+    <div class='wrapper'>
+        <div class='header'>
+        </div>
+        <div class="body">
+            <table>
+                <tr>
+                    <td rowspan="6" width="60">
+                        <div id='left' class="switcher button" >
+                            <img  src="/img/next-left.png" alt="оп">
                         </div>
-                    </center>
-                </td>
-                <td>
-                    <!--<img id="slide" class="button" src="/img/slide_show.png" alt="оп" />-->
-                </td>
-                <td rowspan="6" width="60">
-                    <div id='right' class="switcher button" >
-                        <img  src="/img/next-right.png" alt="оп">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="td_img content" ><!--onmouseover="close_menu()">-->
-                    <div>
-                        <p id='fl1' align="right" class='button'> <img  class="block" src="/img/lblock.jpg" alt="оп"><span class="eNum"> архитектура</span><img  class="block" src="/img/rblock.jpg" alt="оп"> </p>
-                        
-                        <div class="img" id='il1'>
-                            <img  name='il1' class="img" src="img/numbercity/20bwb.jpg" alt="оп">
-                        </div>
-                        <div id='idl1' class='list'>
-                            <p>Проектирование любой стадии (ЭП, П, РП) 
-                            раздела АР и раздела ОДИ (Мероприятия по обеспечению доступа инвалидов)<br /><br />
-                            Защита проектной документации в экспертных и утверждающих инстанциях<br /><br />
-                            Авторский надзор</p>
-                        </div>
-                    </div>
-                </td>
-                <td class="td_center content" align="center">
-                    <!--<div class="td_center">-->
-                    <div>
-                        <p id='fl2' align="center" class='button'> <img  class="block" src="/img/lblock.jpg" alt="оп"><span class="eNum"> портфолио</span><img  class="block" src="/img/rblock.jpg" alt="оп"> </p>
-                        <div id='idl2' onmouseover="stop_close()" class='list'>
-                            <div id='proj_wrap'>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <center>
+                            <div>
+                                <h2 id="title" class='button'> <img  class="block" src="/img/lblock.jpg" alt="оп"> <span class="eNum">внутри</span><img  class="block" src="/img/rblock.jpg" alt="оп"> </h2>
                             </div>
-                            <img id='next-proj' src="img/next-down.png" alt="next proj">
-                            <!--<p id='proj1' class="proj button" >Международный терминал<br />аэропорта «Уфа»</p>
-                            <p id='proj2' class="proj button" >Однокомнатная квартира в г.Уфа</p>
-                            <p id='proj3' class="proj button" >Кофейня «Che Guevara»<br />в аэропорту «Уфа»</p>
-                            <p id='proj4' class="proj button" >Городская Клиническая больница <br />№ 13 палата класса люкс</p>
-                            <p id='proj5' class="proj button" >Административное здание в г.Уфа</p>
-                            <p id='proj6' class="proj button" >Поликлиника «Будь Здоров» в г.Уфа</p>
-                            <p id='proj7' class="proj button" >Офисное помещение компании <br />«Цифроград» в г.Уфа</p>
-                            <p id='proj8' class="proj button" >Частный дом</p>
-                            <p id='proj9' class="proj button" >Кальянная (Уфа, ул. Набережная)</p>
-                            <p id='proj10' class="proj button" >Таунхаус в Уфимском р-не </p>-->
+                        </center>
+                    </td>
+                    <td>
+                        <!--<img id="slide" class="button" src="/img/slide_show.png" alt="оп" />-->
+                    </td>
+                    <td rowspan="6" width="60">
+                        <div id='right' class="switcher button" >
+                            <img  src="/img/next-right.png" alt="оп">
                         </div>
-                        <div class="img" id='il2'>
-                            <img  name='il2' class="img" src="img/numbercity/20bwb.jpg" alt="оп">
-                        </div>
-                        <div id='idl_title' class='list'>
-                            <p style="margin-top:100px">Проектирование объектов (жилые, общественные, торгово-развлекательные, административные, производственные, медицинские)<br /><br />
-                            Разработка интерьера частных, общественных, производственных, медицинских помещений</p>
-                        </div>
-                        <!--<div id='idl_price' class='list'>
-                            <p style="margin-top:100px">до <span class="eNum">75</span> м<sup>2</sup> от <span class="eNum">900</span> <img  class="rub" src="/img/rub.png" alt="оп"><br /><br />
-                            до <span class="eNum">150</span> м<sup>2</sup> от <span class="eNum">800</span> <img  class="rub" src="/img/rub.png" alt="оп"><br /><br />
-                            до <span class="eNum">300</span> м<sup>2</sup> от <span class="eNum">700</span> <img  class="rub" src="/img/rub.png" alt="оп"><br /><br />
-                            до <span class="eNum">600</span> м<sup>2</sup> от <span class="eNum">500</span> <img  class="rub" src="/img/rub.png" alt="оп"><br /><br />
-                            свыше <span class="eNum">600</span> м<sup>2</sup> от <span class="eNum">300</span> <img  class="rub" src="/img/rub.png" alt="оп"></p>
-                        </div>-->
-                        <div id='idl_price' class='list'>
-                            <p style="margin-top:110px">Для расчета стоимости проекта звоните <br /><br /> 
-                            <span style='font-size: 16pt; letter-spacing: 4px;'>+7 917 34 6 102 6</span><br /><br />
-                            или пишите <br /><br />
-                            <span style='font-size: 16pt;'>e011vy@ya.ru</span></p>
-                        </div>
-                    </div>
-                </td>                       
-                <td class="td_img content" ><!--onmouseover="close_menu()">-->
-                    <div>
-                        <p id='fl3' align="left" class='button'> <img  class="block" src="/img/lblock.jpg" alt="оп"><span class="eNum"> интерьер</span><img  class="block" src="/img/rblock.jpg" alt="оп"> </p>
-                        <div class="img" id='il3'>
-                            <img  name='il3' class="img" src="img/numbercity/20bwb.jpg" alt="оп">
-                        </div>
-                        <div id='idl3' class='list'>
-                            <p>концепт/идея<br /><br />
-                                функциональное разделение, варианты планировки
-                                ведомость материалов<br /><br />
-                                развертки стен<br /><br />
-                                схемы расположения светильников, выключателей, розеток, электроприборов <br /><br />
-                                схема расположения сантехники <br /><br />
-                                визуализация <br /><br />
-                                авторский надзор<br /><br />
-                            </p>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <center>
-                        <div id='captionL'>
-                        </div>
-                    </center>
-                </td>
-                <td>
-                    <center>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_img content" ><!--onmouseover="close_menu()">-->
                         <div>
-                            <p id='sl2' align="center" class='button'> <img  class="block" src="/img/lblock.jpg" alt="оп"><span class="eNum"> стоимость</span><img  class="block" src="/img/rblock.jpg" alt="оп"> </p>
+                            <p id='fl1' align="right" class='button'> <img  class="block" src="/img/lblock.jpg" alt="оп"><span class="eNum"> архитектура</span><img  class="block" src="/img/rblock.jpg" alt="оп"> </p>
+                            
+                            <div class="img" id='il1'>
+                                <img  name='il1' class="img" src="img/numbercity/20bwb.jpg" alt="оп">
+                            </div>
+                            <div id='idl1' class='list'>
+                                <p>Проектирование любой стадии (ЭП, П, РП) 
+                                раздела АР и раздела ОДИ (Мероприятия по обеспечению доступа инвалидов)<br /><br />
+                                Защита проектной документации в экспертных и утверждающих инстанциях<br /><br />
+                                Авторский надзор</p>
+                            </div>
                         </div>
-                    </center>
-                </td>
-                <td>
-                    <center>
-                        <div id='captionR'>
-                        </div>
-                    </center>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <center>
+                    </td>
+                    <td class="td_center content" align="center">
+                        <!--<div class="td_center">-->
                         <div>
-                            <p class="contacts"><span id='telephone'>+7 917  34  6  102  6</span><br />
-                            <span id='email'>e011vy@ya.ru</span></p>
+                            <p id='fl2' align="center" class='button'> <img  class="block" src="/img/lblock.jpg" alt="оп"><span class="eNum"> портфолио</span><img  class="block" src="/img/rblock.jpg" alt="оп"> </p>
+                            <div id='idl2' onmouseover="stop_close()" class='list'>
+                                <div id='proj_wrap'>
+                                </div>
+                                <img id='next-proj' src="img/next-down.png" alt="next proj">
+                                <!--<p id='proj1' class="proj button" >Международный терминал<br />аэропорта «Уфа»</p>
+                                <p id='proj2' class="proj button" >Однокомнатная квартира в г.Уфа</p>
+                                <p id='proj3' class="proj button" >Кофейня «Che Guevara»<br />в аэропорту «Уфа»</p>
+                                <p id='proj4' class="proj button" >Городская Клиническая больница <br />№ 13 палата класса люкс</p>
+                                <p id='proj5' class="proj button" >Административное здание в г.Уфа</p>
+                                <p id='proj6' class="proj button" >Поликлиника «Будь Здоров» в г.Уфа</p>
+                                <p id='proj7' class="proj button" >Офисное помещение компании <br />«Цифроград» в г.Уфа</p>
+                                <p id='proj8' class="proj button" >Частный дом</p>
+                                <p id='proj9' class="proj button" >Кальянная (Уфа, ул. Набережная)</p>
+                                <p id='proj10' class="proj button" >Таунхаус в Уфимском р-не </p>-->
+                            </div>
+                            <div class="img" id='il2'>
+                                <img  name='il2' class="img" src="img/numbercity/20bwb.jpg" alt="оп">
+                            </div>
+                            <div id='idl_title' class='list'>
+                                <p style="margin-top:100px">Проектирование объектов (жилые, общественные, торгово-развлекательные, административные, производственные, медицинские)<br /><br />
+                                Разработка интерьера частных, общественных, производственных, медицинских помещений</p>
+                            </div>
+                            <!--<div id='idl_price' class='list'>
+                                <p style="margin-top:100px">до <span class="eNum">75</span> м<sup>2</sup> от <span class="eNum">900</span> <img  class="rub" src="/img/rub.png" alt="оп"><br /><br />
+                                до <span class="eNum">150</span> м<sup>2</sup> от <span class="eNum">800</span> <img  class="rub" src="/img/rub.png" alt="оп"><br /><br />
+                                до <span class="eNum">300</span> м<sup>2</sup> от <span class="eNum">700</span> <img  class="rub" src="/img/rub.png" alt="оп"><br /><br />
+                                до <span class="eNum">600</span> м<sup>2</sup> от <span class="eNum">500</span> <img  class="rub" src="/img/rub.png" alt="оп"><br /><br />
+                                свыше <span class="eNum">600</span> м<sup>2</sup> от <span class="eNum">300</span> <img  class="rub" src="/img/rub.png" alt="оп"></p>
+                            </div>-->
+                            <div id='idl_price' class='list'>
+                                <p style="margin-top:110px">Для расчета стоимости проекта звоните <br /><br /> 
+                                <span style='font-size: 16pt; letter-spacing: 4px;'>+7 917 34 6 102 6</span><br /><br />
+                                или пишите <br /><br />
+                                <span style='font-size: 16pt;'>e011vy@ya.ru</span></p>
+                            </div>
                         </div>
-                        <div id='ref'>
-                            <a href="https://vk.com/insidethetoy"><img  height='30px' src="/img/vk.jpg" alt="vk"></a>
-                            <a href="https://www.facebook.com/insidethetoy/"><img height='30px' src="/img/fb.jpg" alt="FB"></a>
+                    </td>                       
+                    <td class="td_img content" ><!--onmouseover="close_menu()">-->
+                        <div>
+                            <p id='fl3' align="left" class='button'> <img  class="block" src="/img/lblock.jpg" alt="оп"><span class="eNum"> интерьер</span><img  class="block" src="/img/rblock.jpg" alt="оп"> </p>
+                            <div class="img" id='il3'>
+                                <img  name='il3' class="img" src="img/numbercity/20bwb.jpg" alt="оп">
+                            </div>
+                            <div id='idl3' class='list'>
+                                <p>концепт/идея<br /><br />
+                                    функциональное разделение, варианты планировки
+                                    ведомость материалов<br /><br />
+                                    развертки стен<br /><br />
+                                    схемы расположения светильников, выключателей, розеток, электроприборов <br /><br />
+                                    схема расположения сантехники <br /><br />
+                                    визуализация <br /><br />
+                                    авторский надзор
+                                </p>
+                            </div>
                         </div>
-                    </center>
-                </td>
-            </tr>
-        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <div id='captionL'>
+                            </div>
+                        </center>
+                    </td>
+                    <td>
+                        <center>
+                            <div>
+                                <p id='sl2' align="center" class='button'> <img  class="block" src="/img/lblock.jpg" alt="оп"><span class="eNum"> стоимость</span><img  class="block" src="/img/rblock.jpg" alt="оп"> </p>
+                            </div>
+                        </center>
+                    </td>
+                    <td>
+                        <center>
+                            <div id='captionR'>
+                            </div>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <center>
+                            <div>
+                                <p class="contacts"><span id='telephone'>+7 917  34  6  102  6</span><br />
+                                <span id='email'>e011vy@ya.ru</span></p>
+                            </div>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class='ref'>
+            <center>
+                <a target="_blank" href="https://vk.com/insidethetoy"><img  height='30px' src="/img/vk.jpg" alt="vk"></a>
+                <a target="_blank" href="https://www.facebook.com/insidethetoy/"><img height='30px' src="/img/fb.jpg" alt="FB"></a>
+            </center>
+        </div>
     </div>
 </body>
 </html> 
