@@ -22,6 +22,7 @@ $(document).ready(function (){
     $('.img').mouseout(function(){clearTimeout(window.img_timeout);});
     $('#slide').click(func_reset);
     $('.button').mouseover(reset);
+    $('.button').click(reset);
     $('#next-proj').click(next_proj);
     $('#fl1').hover(function(){select('#fl1', 1)}, function(){select('#fl1', 0)});
     $('#fl2').hover(function(){select('#fl2', 1)}, function(){select('#fl2', 0)});
@@ -33,45 +34,18 @@ $(document).ready(function (){
     $('#fl3').click(function(){menu_click('#fl3', '#idl3');});
     $('#sl2').click(function(){menu_click('#sl2', '#idl_price');});
     $('#title').click(function(){menu_click('#title', '#idl_title');});
-    /*$('#proj1').mouseover(function(){show_proj_with_delay('aeroport');});
-    $('#proj2').mouseover(function(){show_proj_with_delay('one_room_flat');});
-    $('#proj3').mouseover(function(){show_proj_with_delay('che_guevara');});
-    $('#proj4').mouseover(function(){show_proj_with_delay('hospital');});
-    $('#proj5').mouseover(function(){show_proj_with_delay('admin_house');});
-    $('#proj6').mouseover(function(){show_proj_with_delay('health_ufa');});
-    $('#proj7').mouseover(function(){show_proj_with_delay('numbercity');});
-    $('#proj8').mouseover(function(){show_proj_with_delay('private_house');});
-    $('#proj9').mouseover(function(){show_proj_with_delay('sniff_house');});
-    $('#proj10').mouseover(function(){show_proj_with_delay('townhouse');});*/
     $('#fl1').mouseover(function(){select_with_delay('#fl1', '#idl1');});
     $('#fl2').mouseover(function(){select_with_delay('#fl2', '#idl2');});
     $('#fl3').mouseover(function(){select_with_delay('#fl3', '#idl3');});
     $('#sl2').mouseover(function(){select_with_delay('#sl2', '#idl_price');});
     $('#title').mouseover(function(){select_with_delay('#title', '#idl_title');});
     $('.block').mouseout(function(){clearTimeout(window.menu_timeout);});
-    /*$('#proj1').hover(function(){select('#proj1', 1);}, function(){select('#proj1', 0);});
-    $('#proj2').hover(function(){select('#proj2', 1);}, function(){select('#proj2', 0);});
-    $('#proj3').hover(function(){select('#proj3', 1);}, function(){select('#proj3', 0);});
-    $('#proj4').hover(function(){select('#proj4', 1);}, function(){select('#proj4', 0);});
-    $('#proj5').hover(function(){select('#proj5', 1);}, function(){select('#proj5', 0);});
-    $('#proj6').hover(function(){select('#proj6', 1);}, function(){select('#proj6', 0);});
-    $('#proj7').hover(function(){select('#proj7', 1);}, function(){select('#proj7', 0);});
-    $('#proj8').hover(function(){select('#proj8', 1);}, function(){select('#proj8', 0);});
-    $('#proj9').hover(function(){select('#proj9', 1);}, function(){select('#proj9', 0);});
-    $('#proj10').hover(function(){select('#proj10', 1);}, function(){select('#proj10', 0);});*/
     $('#left').click(next);
     $('#right').click(next);
     func_reset();
     img_show();
     setInterval("img_show()", 6300);
     body_top = (document.documentElement.clientHeight / 2 - 315)*0.6;
-//    if((document.documentElement.clientHeight - 637) > 0){
-//        $('.body').css("top", (body_top));
-//        $('#ref').css("top", (document.documentElement.clientHeight - 670));
-//    };
-//    if((document.documentElement.clientWidth / 2 - 600) > 0){
-//        $('.body').css("left", (document.documentElement.clientWidth / 2 - 600));
-//    };
     generate_proj_view();
 });
 

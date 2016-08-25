@@ -134,6 +134,8 @@ function next(){
     reset();
     obj = window.focus_pr;
     obj.view.push(obj.view.shift());
+    window.activ = 0;
+    clearTimeout(window.time_close_id);
     if (obj.type == 'design') {
         if (obj.view[0].length > 1) {
             $('#right').css('display', 'block');

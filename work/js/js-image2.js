@@ -16,15 +16,27 @@ function img_clear_slow(num){
     $('#il1').fadeOut(num);
     $('#il2').fadeOut(num);
     $('#il3').fadeOut(num);
+    $('#right').css('display', 'none');
+    $('#left').css('display', 'none');
 }
 
 function img_select(){
+    obj = window.focus_pr;
     for (i=1; i<4; i++){
         tag = '#il'.concat(String(i), ' img');
         path_wb = $(tag).attr('src');
         path = path_wb.replace('wb', '');
         $(tag).attr({src: path});
     }
+    if (obj.type == 'design') {
+        if (obj.view.length > 1) {
+            $('#right').css('display', 'block');
+        };
+    } else {
+        if (obj.view.length > 1) {
+            $('#left').css('display', 'block');
+        };
+    };
 /*var id_img = obj.getAttribute();*/
 }
 
@@ -66,6 +78,7 @@ function img_show(){
         $('#il1 img').attr({src: list[view][0]});
         $('#il2 img').attr({src: list[view][1]});
         $('#il3 img').attr({src: list[view][2]});
+        window.focus_pr = get_proj(list[view]['proj_name']);
         caption(list[view]['proj_name']);
         $(id_img).fadeIn(1000);
     }
