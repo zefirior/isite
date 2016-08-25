@@ -111,21 +111,24 @@ function show_proj(proj_name){
         if (obj.view.length > 1) {
             $('#right').css('display', 'block');
         };
-        $('#il1 img').attr({src: 'img/blanc.png'});
-        $('#il2 img').attr({src: (
+        image_obj[0].src = 'img/blanc.png';
+        image_obj[1].src = 
             'img/'.concat(obj.dir, '/', obj.view[0][obj.view[0].length - 2], 'wb.jpg') ? 
             'img/'.concat(obj.dir, '/', obj.view[0][obj.view[0].length - 2], 'wb.jpg') : 
-            'img/blanc.png')});
-        $('#il3 img').attr({src: 
-            'img/'.concat(obj.dir, '/', obj.view[0][obj.view[0].length - 1], 'wb.jpg')});
+            'img/blanc.png';
+        image_obj[2].src = 
+            'img/'.concat(obj.dir, '/', obj.view[0][obj.view[0].length - 1], 'wb.jpg');
     } else {
         if (obj.view.length > 1) {
             $('#left').css('display', 'block');
         };
-        $('#il1 img').attr({src: 'img/'.concat(obj.dir, '/', obj.view[0][0], 'wb.jpg')});
-        $('#il2 img').attr({src: 'img/'.concat(obj.dir, '/', obj.view[0][1], 'wb.jpg')});
-        $('#il3 img').attr({src: 'img/blanc.png'});
+        image_obj[0].src = 'img/'.concat(obj.dir, '/', obj.view[0][0], 'wb.jpg');
+        image_obj[1].src = 'img/'.concat(obj.dir, '/', obj.view[0][1], 'wb.jpg');
+        image_obj[2].src = 'img/blanc.png';
     };
+    document.il1.src = image_obj[0].src;
+    document.il2.src = image_obj[1].src;
+    document.il3.src = image_obj[2].src;
     $('#il1').css('display', 'block');
     $('#il3').css('display', 'block');
 }
@@ -138,21 +141,24 @@ function next(){
         if (obj.view[0].length > 1) {
             $('#right').css('display', 'block');
         };
-        $('#il1 img').attr({src: 'img/blanc.png'});
-        $('#il2 img').attr({src: (
+        image_obj[0].src = 'img/blanc.png';
+        image_obj[1].src = 
             'img/'.concat(obj.dir, '/', obj.view[0][obj.view[0].length - 2], '.jpg') ? 
             'img/'.concat(obj.dir, '/', obj.view[0][obj.view[0].length - 2], '.jpg') : 
-            'img/blanc.png')});
-        $('#il3 img').attr({src: 
-            'img/'.concat(obj.dir, '/', obj.view[0][obj.view[0].length - 1], '.jpg')});
+            'img/blanc.png';
+        image_obj[2].src =  
+            'img/'.concat(obj.dir, '/', obj.view[0][obj.view[0].length - 1], '.jpg');
     } else {
         if (obj.view[0].length > 1) {
             $('#left').css('display', 'block');
         }
-        $('#il1 img').attr({src: 'img/'.concat(obj.dir, '/', obj.view[0][0], '.jpg')});
-        $('#il2 img').attr({src: 'img/'.concat(obj.dir, '/', obj.view[0][1], '.jpg')});
-        $('#il3 img').attr({src: 'img/blanc.png'});
+        image_obj[0].src = 'img/'.concat(obj.dir, '/', obj.view[0][0], '.jpg');
+        image_obj[1].src = 'img/'.concat(obj.dir, '/', obj.view[0][1], '.jpg');
+        image_obj[2].src = 'img/blanc.png';
     };
+    document.il1.src = image_obj[0].src;
+    document.il2.src = image_obj[1].src;
+    document.il3.src = image_obj[2].src;
 }
 
 function reset() {
