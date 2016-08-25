@@ -52,7 +52,7 @@ $(document).ready(function (){
 function generate_proj_view(){
     var proj = window.projects2;
     var i = 0;
-    while (i < 4) { //proj.length) {
+    while (i < 6) { //proj.length) {
         if (proj[i].type == 'design'){
             align = 'right';
             }else{
