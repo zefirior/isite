@@ -7,6 +7,12 @@ var projects = {
 
 var container = new Array();
 
+var image_obj = [new Image(350, 350), new Image(350, 350), new Image(350, 350)];
+
+var fotos1 = new Array();
+var fotos2 = new Array();
+var fotos3 = new Array();
+
 var projects2 = [   {id : '#proj1',
                     dir : 'one_room_flat',
                      html_name : "Функциональное&nbsp;зонирование пространства&nbsp;с&nbsp;помощью корпусной&nbsp;мебели&nbsp;«Mr.Doors»",
@@ -124,6 +130,19 @@ var projects2 = [   {id : '#proj1',
                     },
 ];
 
-var fotos1 = new Array();
-var fotos2 = new Array();
-var fotos3 = new Array();
+
+
+/*
+
+bum1 = new Image();
+bum2 = new Image();
+bum3 = new Image();
+bum1.src = 'img/admin_house/1a.jpg';
+bum2.src = 'img/admin_house/2a.jpg';
+bum3.src = 'img/blanc.png';
+document.il1.src = bum1.src;
+document.il2.src = bum2.src;
+document.il3.src = bum3.src;
+
+
+*/

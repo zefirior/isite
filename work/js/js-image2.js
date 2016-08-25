@@ -21,13 +21,13 @@ function img_clear_slow(num){
 }
 
 function img_select(){
+    image_obj[0].src = document.il1.src.replace('wb', '');
+    image_obj[1].src = document.il2.src.replace('wb', '');
+    image_obj[2].src = document.il3.src.replace('wb', '');
+    document.il1.src = image_obj[0].src;
+    document.il2.src = image_obj[1].src;
+    document.il3.src = image_obj[2].src;
     obj = window.focus_pr;
-    for (i=1; i<4; i++){
-        tag = '#il'.concat(String(i), ' img');
-        path_wb = $(tag).attr('src');
-        path = path_wb.replace('wb', '');
-        $(tag).attr({src: path});
-    }
     if (obj.type == 'design') {
         if (obj.view.length > 1) {
             $('#right').css('display', 'block');
@@ -37,15 +37,8 @@ function img_select(){
             $('#left').css('display', 'block');
         };
     };
-/*var id_img = obj.getAttribute();*/
 }
 
-function img_unselect(tag){
-    path = $(tag).attr('src');
-    path_wb = path.replace('.jpg', 'wb.jpg');
-    $(tag).attr({src: path_wb});
-/*var id_img = obj.getAttribute();*/
-}
 
 
 function app(num){
@@ -68,17 +61,19 @@ function img_show(){
         while (window.position == tmp);
         window.position = tmp;
         id_img = '#il' + String(window.position);
-        
         if (window.position == 1) {list = fotos1;};
         if (window.position == 2) {list = fotos2;};
         if (window.position == 3) {list = fotos3;};
-                
         view = Math.round(list.length*Math.random() - 0.5);
-        var img_tag = id_img + ' img';
-        $('#il1 img').attr({src: list[view][0]});
-        $('#il2 img').attr({src: list[view][1]});
-        $('#il3 img').attr({src: list[view][2]});
         window.focus_pr = get_proj(list[view]['proj_name']);
+
+        image_obj[0].src = list[view][0];
+        image_obj[1].src = list[view][1];
+        image_obj[2].src = list[view][2];
+                
+        document.il1.src = image_obj[0].src;
+        document.il2.src = image_obj[1].src;
+        document.il3.src = image_obj[2].src;
         caption(list[view]['proj_name']);
         $(id_img).fadeIn(1000);
     }
