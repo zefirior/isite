@@ -203,7 +203,7 @@ function next_proj(){
     var i = 0;
     while (i < proj.length) {
         if(proj[i].id.slice(1) == id){
-            item = i % (proj.length - 1) + 1;
+            item = (i + 1) % proj.length;
             break;
         };
         i++;
@@ -214,7 +214,7 @@ function next_proj(){
             align = 'left';
             };
     content = "<div class='container_proj'><p id='".concat(proj[item].id.slice(1), "' class='proj button' style='text-align:", align,"'>", proj[item].html_name, "</p></div>");
-    $('#proj_wrap').append(content);
+    $('#proj-wrap').append(content);
     $(proj[item].id).mouseover({dir: proj[item].dir}, function(event){show_proj_with_delay(event.data.dir);});
     $(proj[item].id).mouseover({id: proj[item].id}, function(event){select(event.data.id, 1);});
     $(proj[item].id).mouseout({id: proj[item].id}, function(event){select(event.data.id, 0);});

@@ -124,7 +124,6 @@ div.img {
 }
 
 #idl1, #idl2, #idl3, #idl_price, #idl_title, .switcher  {
-    vertical-align: middle;
     display: none;
 }
 
@@ -163,8 +162,7 @@ div.img {
 }
 
 .container_proj {
-    height:55px;
-    border:1px white solid;
+    margin:20px 0;
 }
 
 #captionR {
@@ -189,11 +187,27 @@ div.img {
     right:27px
 }
 
-#ref {
-    position: relative;
+#proj-wrap {
+    overflow: hidden;
+    height:330px;
+}
+
+.proj-list-down {
+    position:absolute;
+    z-index:5;
+    width:350px;
+    height:50px;
+    margin-top:-50px;
+    background:linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
 }
 
 #next-proj {
+    width:40px;
+    height:20px;
+}
+
+#wrap-next-proj {
+    margin:0 auto;
     width:40px;
     height:20px;
 }

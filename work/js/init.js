@@ -52,14 +52,14 @@ $(document).ready(function (){
 function generate_proj_view(){
     var proj = window.projects2;
     var i = 0;
-    while (i < 6) { //proj.length) {
+    while (i < 9) { //proj.length) {
         if (proj[i].type == 'design'){
             align = 'right';
             }else{
                 align = 'left';
                 };
         content = "<div class='container_proj'><p id='".concat(proj[i].id.slice(1), "' class='proj button' style='text-align:", align,"'>", proj[i].html_name, "</p></div>");
-        $('#proj_wrap').append(content);
+        $('#proj-wrap').append(content);
         $(proj[i].id).mouseover({dir: proj[i].dir}, function(event){show_proj_with_delay(event.data.dir);});
         $(proj[i].id).mouseover({id: proj[i].id}, function(event){select(event.data.id, 1);});
         $(proj[i].id).mouseout({id: proj[i].id}, function(event){select(event.data.id, 0);});
