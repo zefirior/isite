@@ -12,6 +12,7 @@ var reset_id;
 var timeout = 300;
 var menu_timeout;
 var img_timeout;
+var proj_ch_interval = 4000;
 
 
 $(document).ready(function (){
@@ -44,7 +45,7 @@ $(document).ready(function (){
     $('#right').click(next);
     func_reset();
     img_show();
-    setInterval("img_show()", 6300);
+    setInterval("img_show()", window.proj_ch_interval + 300);
     body_top = (document.documentElement.clientHeight / 2 - 315)*0.6;
     generate_proj_view();
 });

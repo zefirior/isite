@@ -52,7 +52,7 @@ function app(num){
 function img_show(){
     if(window.activ) {
         
-        window.time_close_id = setTimeout("img_clear_slow(1000)", 5000);
+        window.time_close_id = setTimeout("img_clear_slow(1000)", window.proj_ch_interval - 1000);
         
         var tmp;
         do {
